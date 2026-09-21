@@ -1,0 +1,351 @@
+.township-gallery {
+    margin: 0px;
+    background-color: #1a1a1a15;
+    background-color: #FFFBF7;
+}
+
+#TownshipGallery .page-title{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#TownshipGallery .title-wrapper::after{
+    content: none;
+}
+
+#township_gallery_tab {
+    width: fit-content;
+    padding: 8px;
+    border-radius: 6px;
+    /* margin-bottom: 30px; */
+    background: radial-gradient(circle, #f7c985 0%, #c49056 100%);;
+    box-shadow: 0 0 10px #1a1a1a25;
+    border-bottom: 0px;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#township_gallery_tab.nav-tabs .nav-link {
+    background: transparent;
+    min-width: 170px;
+    font-family: Great-Book;
+    border: 2px solid #000;
+    border-radius: 5px;
+    
+    border: 2px solid var(--theme-primary-color);
+    opacity: 1;
+    color: #fff;
+}
+
+#township_gallery_tab.nav-tabs .nav-link span{
+    color: #fff !important;
+    opacity: 1;
+    /* color: var(--theme-primary-color); */
+}
+
+#township_gallery_tab.nav-tabs .nav-link:hover {
+    /* background: var(--theme-gradient); */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+#township_gallery_tab.nav-tabs .nav-link:hover span{
+    color: #fff;
+}
+#township_gallery_tab.nav-tabs .nav-item .nav-link.active span{
+color: #fff;
+}
+
+#township_gallery_tab.nav-tabs .nav-item .nav-link.active {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    
+}
+/* mobile select field */
+.township-gallery-select {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px;
+}
+
+.township-gallery-select-btn {
+    width: 100%;
+    /* max-width: 200px; */
+    margin-inline: auto;
+    height: 52px;
+    padding: 0 18px;
+    border: 2px solid var(--theme-primary-color);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: Great-Book;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.township-gallery-select-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.township-gallery-select.open
+.township-gallery-select-btn i {
+    transform: rotate(180deg);
+}
+
+.township-gallery-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.township-gallery-select.open
+.township-gallery-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.township-gallery-dropdown li {
+    padding: 12px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Great-Book;
+    font-weight: 600;
+    text-align: center;
+}
+
+.township-gallery-dropdown li:hover {
+    background: rgba(162, 118, 67, 0.1);
+}
+
+.township-gallery-dropdown li.active {
+    background: radial-gradient(circle, #f7c985 0%, #c49056 100%);;
+    color: #fff;
+}
+
+.township-gallery-select {
+    position: relative;
+    z-index: 999;
+}
+
+.township-gallery-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: calc(50% - 100px);
+    width: 200px;
+    z-index: 9999;
+}
+
+@media (max-width: 991px) {
+    .township-gallery-tabs {
+        display: none !important;
+    }
+
+    .township-gallery-select {
+        display: block;
+    }
+}
+
+/* mobile select field end*/
+
+.township-gallery h2.section-title {
+    word-spacing: 10px;
+}
+
+.township-img-master-plan {
+    height: 400px;
+    width: auto;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    box-shadow: 0 0 10px #1a1a1a25;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.township-little-gallery {
+    position: relative;
+}
+
+.township-little-gallery img {
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 10px;
+}
+
+.township-little-gallery .img_alt_text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--theme-primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+#township_gallery_content .swiper-slide-active .township-little-gallery .img_alt_text {
+    display: block;
+}
+
+#township_gallery_content .swiper-slide-active .township-little-gallery {
+    transform: scale(1);
+    filter: blur(0);
+}
+
+#township_gallery_content .swiper-nav {
+    text-align: center;
+}
+
+#township_gallery_content .swiper-slide {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#township_gallery_content .swiper-slide-next,
+#township_gallery_content .swiper-slide-prev {
+    filter: blur(0px);
+    transform: scale(0.9);
+}
+
+#township_gallery_content .swiper-button-next,
+#township_gallery_content .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+#township_gallery_content .swiper-button-next {
+    right: 20px;
+}
+
+#township_gallery_content .swiper-button-prev {
+    left: 20px;
+}
+
+.township-gallery .sticky-logos {
+    right: unset;
+    left: 7%;
+}
+
+.township-gallery-nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.custom-township-gallery-next,
+.custom-township-gallery-prev {
+    line-height: 8px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    background: var(--theme-gradient);
+    box-shadow: 0 0 5px #1a1a1a25;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-township-gallery-next:hover,
+.custom-township-gallery-prev:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid  var(--theme-primary-color);
+}
+
+.township-gallery .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+@media (max-width: 1299px) {
+
+    .township-little-gallery img {
+        height: 300px;
+    }
+}
+
+/* @media screen and (max-width: 992px) {
+
+    .township-little-gallery img {
+        height: 260px;
+    }
+} */
+
+@media (max-width: 991px) {
+    .township-gallery-tabs {
+        display: none !important;
+    }
+
+    .township-gallery-select {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* .township-little-gallery img {
+        height: 190px;
+    } */
+    
+    /* .township-gallery-select{
+        width: 95%;
+    } */
+
+    /* .tab-pane {
+        padding: 0 12px;
+    } */
+}
+
+@media (max-width: 656px) {
+    .township-img-master-plan{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .township-little-gallery img {
+        height: 190px;
+    }
+}

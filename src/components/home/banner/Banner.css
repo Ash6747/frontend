@@ -1,0 +1,400 @@
+.mobile-banner {
+  display: none;
+}
+
+.BannerTitleMain,
+.BannerTitleMain.subTxt {
+  font-size: 16px;
+  color: #fff;
+  text-align: right;
+  line-height: 1;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.banner_section {
+  position: relative;
+}
+
+.BannerTitleMain {
+  font-family: Great-Book;
+}
+
+/* .ban-logo {
+  position: absolute;
+  max-width: 215px;
+  top: 0;
+  left: 8%;
+  z-index: 2;
+  background: #fff;
+  padding: 40px 15px;
+  border-radius: 0 0px 15px 15px;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: banlogo 0.5s linear 0.75s forwards;
+
+  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
+
+
+  border: 2px solid;
+
+  border-image-source: radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98F9FF 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(80.69% 208.78% at 108.28% 112.58%, #BFDDFF 0%, rgba(38, 113, 183, 0) 100%);
+} */
+
+.ban-logo {
+  position: absolute;
+  max-width: 210px;
+  top: -5px;
+  left: 8%;
+  z-index: 2;
+  padding: 40px 30px;
+  border-radius: 0 0 45px 45px;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: banlogo 0.5s linear 0.75s forwards;
+
+  /* Inner background */
+  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%,
+      rgba(165, 239, 255, 0.2) 0%,
+      rgba(110, 191, 244, 0.0447917) 77.08%,
+      rgba(70, 144, 213, 0) 100%);
+
+  /* Required for pseudo border */
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient border */
+.ban-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 0 0 45px 45px;
+
+  background:
+    radial-gradient(80.38% 222.5% at -13.75% -12.36%,
+      #98f9ff 0%,
+      rgba(255, 255, 255, 0) 100%),
+    radial-gradient(80.69% 208.78% at 108.28% 112.58%,
+      #bfddff 0%,
+      rgba(38, 113, 183, 0) 100%);
+
+  /* Show only 2px border area */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes banlogo {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.banner_image {
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  display: block;
+  width: 100%;
+}
+
+.banner_image img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* .banner_image video {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+
+} */
+.banner_image video {
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.banner-text {
+  backdrop-filter: blur(72px);
+  clip-path: url(#bgblur_0_379_104_clip_path);
+  height: 100%;
+  width: 100%;
+}
+
+.caption-text {
+  position: absolute;
+  top: 30%;
+  left: 12%;
+}
+
+.custom-banner-next,
+.custom-banner-prev {
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.custom-banner-next {
+  right: 10px;
+  z-index: 5;
+}
+
+.custom-banner-prev i,
+.custom-banner-next i {
+  font-size: 17px;
+}
+
+.custom-banner-prev {
+  left: 10px;
+  z-index: 5;
+}
+
+.txt_wrapper {
+  position: absolute;
+  top: 28%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 4;
+  padding: 0px 11% 0;
+}
+
+.txt_wrapper span,
+.txt_wrapper p {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.txt_wrapper .enjoy_wrap p {
+  font-size: 70px;
+  line-height: 100%;
+}
+
+.txt_wrapper p.awesome {
+  color: yellow;
+  font-size: 120px;
+  line-height: 60px;
+  text-transform: lowercase;
+  transform: translateX(100px) translateY(20px);
+}
+
+.only_txt {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.only {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.pegasus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pegasus span {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.pegasus p {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 100%;
+}
+
+.bottom_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.bottom_wrap p.prem {
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+}
+
+.bottom_wrap .loc p {
+  font-size: 28px;
+  letter-spacing: 0.1rem;
+}
+
+.overlay_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.overlay_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.BannerTitleMain.subTxt2 {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* BANNER RESPONSIVE CSS */
+/* ------------------------------------------------------------------------------------------ */
+
+
+
+@media (min-width: 1399px) {
+  .banner_image {
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .BannerTitleMain,
+  .BannerTitleMain.subTxt {
+    font-size: 1.17vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner_image {
+    max-height: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    /* aspect-ratio: 24/12; */
+  }
+
+  .BannerTitleMain,
+  .BannerTitleMain.subTxt {
+    font-size: 12px;
+  }
+
+  .caption-text {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner_section {
+    margin-top: 76px;
+  }
+
+  .ban-logo {
+    right: 15px;
+    max-width: 135px;
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .caption-text {
+    top: 50px;
+  }
+
+  .BannerTitleMain,
+  .BannerTitleMain.subTxt {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 552px) {
+  .ban-logo img {
+    height: 75px;
+    width: 75px;
+  }
+
+  .ban-logo {
+    left: 15px;
+    max-width: 125px;
+    padding: 10px 25px;
+
+  }
+
+  .desktop-banner {
+    display: none;
+  }
+
+  .mobile-banner {
+    display: block;
+  }
+
+  .caption-text {
+    top: 25%;
+    /* display: none; */
+    left: 17%;
+  }
+
+  .BannerTitleMain,
+  .BannerTitleMain.subTxt {
+    text-align: center;
+  }
+
+  .banner_image {
+    /* aspect-ratio: unset;
+    height: calc(100vh - 74px); */
+    aspect-ratio: 4 / 5;
+    height: stretch;
+  }
+
+  .banner_image h2 {
+    line-height: 1.1;
+  }
+}

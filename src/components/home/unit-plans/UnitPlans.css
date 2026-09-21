@@ -1,0 +1,45 @@
+.unitplans_content {
+  position: relative;
+  /* background: url("/images/unitpaln/unitplanback.png") no-repeat center/cover fixed; */
+  /* background: url("/images/aboutcygnus/aboutBack.png") no-repeat center/cover; */
+
+  position: relative;
+}
+
+.unitplans_content::before {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background: url("/images/unitpaln/unitplan-bg.webp") no-repeat center/cover fixed;
+  /* opacity: 0.65; */
+  z-index: -1;
+}
+
+.unitplans_content .title-wrapper {
+  margin-bottom: 20px;
+}
+
+.unitplans_content .sec_title,
+.unitplans_content p {
+  text-align: center;
+  color: #fff;
+}
+
+.unitplans-section .ov-list-icon {
+  background: none;
+  height: auto;
+}
+
+
+.unitplans-section .ov-list-container {
+  margin: auto;
+  margin-top: -83px;
+  width: 100%;
+  max-width: 100%;
+  padding: 25px 0;
+}
+
+.unitplans-section .ov-list-container,
+.unitplans_content .row {
+  margin-bottom: 83px;
+}

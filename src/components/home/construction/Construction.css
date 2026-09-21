@@ -1,0 +1,141 @@
+#youtubeiframe .equal-title {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+}
+
+.construction {
+    background: url('/images/general/body-bg.webp');
+}
+
+.construction-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.frame-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 0px 15px;
+    margin-bottom: 15px;
+}
+
+.frame-wrapper::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15px;
+    border-top: none;
+    border-color: var(--theme-primary-color);
+}
+
+.frame-wrapper iframe {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+#video {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px #1a1a1a50;
+    border-radius: 15px;
+}
+
+.youtube-placeholder {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+}
+
+.youtube-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #1a1a1a50;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background: rgb(255 255 255);
+    color: white;
+    border-radius: 50%;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+@media(max-width:1199px) {
+    /* #construction iframe {
+        height: 260px;
+    } */
+
+    .frame-wrapper {
+        width: 100%;
+    }
+
+    #video {
+        /* height: 280px;
+        width: 550px; */
+    }
+}
+
+@media(max-width:992px) {
+    #video {
+        /* height: 300px;
+        width: 100%; */
+    }
+}
+
+@media(max-width:767px) {
+    /* #construction iframe {
+        width: 100%;
+    } */
+
+    #construction h2 {
+        font-size: 25px;
+        padding-bottom: 2px;
+    }
+
+    #video {
+        /* height: 245px; */
+        /* width: 100%; */
+        margin-top: 0px;
+    }
+
+    .frame-wrapper::before {
+        top: 10px;
+        left: 0px;
+        width: 100%;
+    }
+
+}
+
+@media(max-width:552px) {
+    /* #construction iframe {
+        height: 150px;
+    } */
+
+    #video {
+        /* height: 150px; */
+    }
+}

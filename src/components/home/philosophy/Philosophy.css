@@ -1,0 +1,183 @@
+.philosophy-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.philosophy-h4 {
+    color: #A2762B;
+}
+
+.philosophy-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.philosophy-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 45%;
+    margin-top: -15px;
+    padding: 1.5px;
+    border-radius: 400px 400px 0px 0px;
+    background: conic-gradient(from var(--border-angle), #FFDE59 0%, #D57C45 50%, #FFDE59 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+    animation: rotateBorderAngle 4s linear infinite;
+}
+
+.philosophy-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 45px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - 30px);
+    overflow: hidden;
+    border-radius: 400px 400px 20px 20px;
+    background: url("/images/philosophy/dome-bg.png") no-repeat center / 100% 100%;
+    margin: 15px;
+}
+
+.philosophy-icon img {
+    width: 28px;
+}
+
+.philosophy-content h4 {
+    margin-top: 20px;
+}
+
+
+.philosophy-content p {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.philosophy-icon {
+    position: relative;
+    width: auto;
+    aspect-ratio: 1;
+    height: 76px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0;
+    z-index: 2;
+    background: url("/images/philosophy/icon-bg-ring.png") center/contain no-repeat;
+}
+
+.philosophy-icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+/* .philosophy-icon::before {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+} */
+
+@media (min-width: 1400px) {
+    .philosophy-content p {
+        font-size: 16px;
+    }
+
+    .philosophy-content h4 {
+        font-size: 28px;
+    }
+
+    .philosophy-content {
+        padding: 50px 50px 40px;
+    }
+}
+
+@media (min-width: 1799px) {
+    .philosophy-content p {
+        font-size: 22px;
+    }
+
+    .philosophy-content h4 {
+        font-size: 34px;
+    }
+
+    .philosophy-icon {
+        height: 90px;
+    }
+
+    .philosophy-content {
+        padding: 50px 60px 50px;
+    }
+}
+
+/* @media (max-width: 1024px) {
+    .philosophy-content p {
+        font-size: 16px;
+    }
+
+    .philosophy-content h4 {
+        font-size: 28px;
+    }
+
+    .philosophy-content {
+        padding: 50px 50px 40px;
+    }
+} */
+
+@media (max-width: 992px) {
+    .philosophy-content p {
+        font-size: 10px;
+    }
+
+    .philosophy-content h4 {
+        font-size: 16px;
+    }
+
+    .philosophy-content {
+        padding: 24px 22px 24px;
+    }
+
+    .philosophy-icon {
+        padding: 15px;
+        height: 50px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .philosophy-card {
+        max-width: 275px;
+    }
+}
+
+@media (max-width: 552px) {
+    .philosophy-content p {
+        font-size: 10px;
+    }
+
+    .philosophy-content h4 {
+        font-size: 16px;
+    }
+
+    .philosophy-content {
+        /* padding: 50px 50px 40px; */
+    }
+
+
+}

@@ -1,0 +1,57 @@
+# Block unwanted bots
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: YandexImages
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Dalvik
+Disallow: /
+
+User-agent: Motor
+Disallow: /
+
+User-agent: bot*
+Disallow: /
+
+User-agent: *bot
+Disallow: /
+
+# Allow Google Ads crawler
+User-agent: AdsBot-Google
+Allow: /
+
+# Allow Google Images crawler
+User-agent: Googlebot-Image
+Allow: /
+
+# General restrictions for all other crawlers
+User-agent: *
+Disallow: /static/
+Disallow: /images/
+Disallow: /pdf/
+Disallow: /videos/

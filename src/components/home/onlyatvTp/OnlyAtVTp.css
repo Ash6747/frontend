@@ -1,0 +1,138 @@
+section#OnlyatVTp {
+  padding-bottom: 0px;
+}
+
+.OnlyatVTp {
+  background: url('/images/OnlyatVTp/bg.png') no-repeat center/cover fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.OnlyatVTp .container {
+  overflow-x: visible;
+}
+
+.pillars-wrapper {
+  overflow: visible;
+  margin-top: -80px;
+}
+
+.pillar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height: 100%;
+  overflow: visible;
+}
+
+.pillar-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #703B18BF;
+  margin-bottom: 10px;
+  max-width: 150px;
+  line-height: 1.4;
+}
+
+.pillar-graphic {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 180px;
+  position: relative;
+  overflow: visible;
+}
+
+.pillar-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.OnlyatVTp::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(254, 253, 253, 0) 0%, #FEFDFD 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.only-vtp-mobile .swiper-slide {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+
+.only-vtp-mobile .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .only-title {
+    margin-bottom: -70px;
+  }
+}
+
+@media (max-width:767px) {
+
+  /* section#OnlyatVTp {
+        display: none;
+    } */
+  .pillar-item {
+    height: 250px;
+    /* Adjust this based on your tallest content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .pillar-text {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  .pillar-graphic {
+    height: 180px;
+    /* Reserve consistent image area */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .pillar-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  section#OnlyatVTp {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .only-title {
+    margin-bottom: -0px;
+  }
+}

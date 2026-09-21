@@ -1,0 +1,22 @@
+#event {
+  background: url("/images/shot/shotBack.webp") no-repeat center center;
+  background-size: cover;
+  color: #3b3b3b;
+  position: relative;
+}
+
+#event2 {
+  /* background: url("/images/shot/shotBack.webp") no-repeat center center; */
+  /* background: url('/images/OnlyatVTp/bg.png') no-repeat center/cover fixed; */
+  /* background-size: cover; */
+  color: #3b3b3b;
+  position: relative;
+}
+#event2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/images/OnlyatVTp/bg.png') no-repeat center/cover fixed;
+  opacity: 0.5;   /* background image opacity */
+  z-index: -1;
+}

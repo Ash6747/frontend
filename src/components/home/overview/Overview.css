@@ -1,0 +1,499 @@
+.about-cygnus-container {
+  /* background: url("/images/banner/aboutBack.webp") no-repeat center/cover
+    fixed;
+  color: #3b3b3b; */
+  background: linear-gradient(104.85deg, rgba(255, 255, 255, 0.5) 0%, rgba(198, 193, 193, 0.5) 117.57%);
+  position: relative;
+}
+
+.about_chrysos_ove2 {
+  position: relative;
+  /* height: calc(100vh + 150px); */
+}
+
+.about_chrysos_ove2.side-space {
+  /* padding-right: 180px; */
+}
+
+.strip-about {
+  display: none;
+}
+
+div#about-cygnus.section-space {
+  padding-top: 80px;
+}
+
+.left-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.left-image video {
+  min-height: 550px;
+  height: calc(100vh - 150px);
+  max-height: 650px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 6% center;
+}
+
+.about_chrysos_ove2 video,
+.about_chrysos_ove2 .clubhouse-video-wrapper {
+  /* height: 100%; */
+  /* width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0; */
+  /* height: 100vh; */
+  /* width: 100%; */
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.about_chrysos_ove2 video {
+  object-fit: cover;
+  object-position: right;
+  border-radius: 0;
+}
+
+.about_chrysos_ove2 .clubhouse-video-wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  border: none;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.about_chrysos_ove2 .clubhouse-preview-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.about_chrysos_ove2 .clubhouse-title {
+  position: absolute;
+  top: 20%;
+  left: 40px;
+  font-size: 32px;
+  line-height: 1.4;
+  color: #ffffff;
+  margin: 0;
+  pointer-events: none;
+  z-index: 1;
+  text-align: right;
+}
+
+.text-section {
+  /* padding: 30px 70px 30px 110px; */
+}
+
+.countdown-text {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.codename {
+  margin: 10px 0 0px;
+  /* background-image: linear-gradient(to right, #44392e, #755b55, #44392e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  text-align: left;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.ov-list-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  z-index: 1;
+}
+
+.ov-list-container {
+  width: max-content;
+  /* min-width: 190px; */
+  min-width: 13vw;
+  max-width: 50vw;
+  position: relative;
+  display: flex;
+  padding: 18px 0;
+  margin-bottom: 0;
+
+  list-style: none;
+  background-image: url("/images/overview/ov-list-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  border-radius: 15px;
+
+  /* Gradient border */
+  isolation: isolate;
+
+  /* Shadow */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  z-index: 1;
+}
+
+
+
+.ov-list-item {
+  display: flex;
+  flex-direction: column;
+  /* width: max-content; */
+  /* min-width: 220px;
+  max-width: 250px; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-right: 0.6px solid #e7ca99;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+
+.ov-list-item:last-child {
+  border: none
+}
+
+.ov-list-title {
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.ov-list-desc {
+  text-align: center;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.ov-list-break {
+  /* border: 1px solid; */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--prime-color) 32.32%, var(--prime-color) 77.69%, rgba(255, 255, 255, 0) 100%);
+  height: 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px 0;
+  max-width: 80px;
+}
+
+.ov-list-break svg {
+  height: 15px;
+  width: 15px;
+  margin-left: 2px;
+}
+
+.about_chrysos_ove2 .verticle.ov-list-container {
+  display: flex;
+}
+
+.about_chrysos_ove2 .ov-list-container {
+  display: none;
+}
+
+.verticle.ov-list-container {
+  position: absolute;
+  flex-direction: column;
+  width: 40px;
+  left: auto;
+  right: 85px;
+  right: 90px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50.5%);
+
+  padding: 1vw;
+  margin-bottom: 0;
+  background-image: url("/images/overview/ov-list-bg-verticle.png");
+}
+
+.verticle.ov-list-container .ov-list-item {
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 1.1vw;
+  padding-bottom: 1.1vw;
+  border-right: none;
+  border-bottom: 0.6px solid #e7ca99;
+}
+
+.verticle.ov-list-container .ov-list-item:last-child {
+  border: none;
+}
+
+.ov-list-icon {
+  background: url(/images/philosophy/icon-bg-ring.png) center / contain no-repeat;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ov-list-icon svg {
+  height: 20px;
+  width: 20px;
+}
+
+
+.ov-list-title {
+  margin-bottom: 0;
+  font-size: 22px;
+  text-align: center;
+  color: var(--prime-color);
+}
+
+.ov-list-subtitle {
+  margin-bottom: 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ov-list-item {
+  flex: 1;
+  justify-content: flex-start;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+.about-cygnus-container .ov-list-title {
+  color: #000
+}
+
+/* Responsive Css Starts */
+@media screen and (min-width: 1200px) {
+  .about_chrysos_ove2 video,
+  .about_chrysos_ove2 .clubhouse-video-wrapper {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1799px) {
+  .left-image img {
+    height: auto;
+    width: 95%;
+  }
+
+  .description {
+    font-size: 24px;
+    margin-bottom: 31px;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+
+  .ov-list-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .verticle.ov-list-container {
+    right: calc(90px - 2vw);
+  }
+
+  .ov-list-title {
+    font-size: 26px;
+  }
+
+  .ov-list-desc {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  .left-image video {
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .verticle.ov-list-container {
+    /* padding: 10px 18px; */
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .about_chrysos_ove2 {
+    position: relative;
+    height: auto;
+  }
+
+  .about_chrysos_ove2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about_chrysos_ove2.side-space {
+    padding-right: 0;
+  }
+
+  .about_chrysos_ove2 .ov-list-container.verticle {
+    display: none;
+  }
+
+  .about_chrysos_ove2 .ov-list-container {
+    display: flex;
+    margin: auto;
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .ov-list-container {
+    max-width: 65vw;
+  }
+
+  .about_chrysos_ove {
+    padding-left: 0;
+    padding-right: 0;
+    /* padding-bottom: 0; */
+  }
+
+  .left-image video {
+    height: auto;
+    min-height: auto;
+  }
+
+  .about_chrysos_ove .ov-list-container {
+    margin: auto;
+    margin-top: -60px;
+  }
+
+  .inner-content {
+    margin-bottom: 25px;
+    align-items: center;
+  }
+
+  .inner-content p,
+  .about_chrysos_ove .sec_title {
+    text-align: center;
+  }
+
+  .codename {
+    margin: 0;
+  }
+
+  .about_chrysos_ove2 .clubhouse-title {
+    font-size: 15px;
+    top: 10%;
+  }
+
+  .description {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .ov-list-title {
+    font-size: 16px;
+  }
+
+  .ov-list-desc {
+    font-size: 10px;
+  }
+
+  .ov-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    padding: 12px;
+  }
+
+  .ov-list-container {
+    background-image: url("/images/overview/ov-list-mob-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .about_chrysos_ove .ov-list-container {
+    width: 90%;
+  }
+
+  .about_chrysos_ove2 .ov-list-container {
+    width: 95%;
+  }
+
+
+  .about_chrysos_ove .ov-list-container,
+  .about_chrysos_ove2 .ov-list-container {
+    width: 83%;
+    max-width: 80vw;
+    margin-top: -15px;
+  }
+
+  .ov-list-container>* {
+    flex: 0 0 calc(50%);
+    max-width: calc(50%);
+  }
+
+  .ov-list-item {
+    padding: 10px;
+    gap: 5px;
+    border-bottom: 0.6px solid #e7ca99;
+  }
+
+  .ov-list-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .ov-list-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 552px) {
+
+  .about_chrysos_ove,
+  .about_chrysos_ove2 {
+    position: relative;
+  }
+
+}
+
+/* Responsive Css End */

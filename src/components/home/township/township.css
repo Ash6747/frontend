@@ -1,0 +1,146 @@
+ 
+
+#township {
+    display: flex;
+    align-items: center;
+    .sec_title, .sec_title span{
+        font-family: Great-Book, sans-serif;
+    }
+    position: relative;
+}
+
+.township_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/images/philosophy/floral-bg.webp") no-repeat center/cover fixed;
+    z-index: -1;
+        opacity: 0.5;
+}
+
+.township-row {
+    row-gap: 50px;
+    row-gap: 30px;
+}
+
+.th-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 150px;
+    padding: 30px 30px;
+    /* background-color: #B8846D; */
+    /* background-color: rgb(196 144 86 / 59%); */
+    background: #673828;
+    background: linear-gradient(90deg, rgba(103, 56, 40, 1) 0%, rgba(188, 130, 110, 1) 25%, rgba(221, 189, 170, 1) 50%, rgba(188, 130, 110, 1) 72%, rgba(103, 56, 40, 1) 100%);
+    border-radius: 15px;
+    .sec_title, .sec_title span{
+        font-family: Great-Book, sans-serif;
+        color: #fff;
+        background: radial-gradient(circle, #FFFFFF 0%, #c7c7c7 100%);
+        background: radial-gradient(circle, #FFFFFF 0%, #fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
+.township-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #C49056;
+    border: 1px solid #fff;
+    padding: 25px;
+
+    background: #fff;
+}
+
+.township-highlights::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/images/philosophy/floral-bg.webp") no-repeat center/cover fixed;
+    z-index: -1;
+        opacity: 0.5;
+}
+
+.township-ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.township-box {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.township-box p {
+    text-align: center;
+    /* color: #fff; */
+    line-height: 16px;
+}
+
+.township-box img {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(492%) hue-rotate(344deg) brightness(96%) contrast(101%);
+    /* filter: brightness(0) saturate(100%) invert(44%) sepia(4%) saturate(1265%) hue-rotate(326deg) brightness(96%) contrast(95%); */
+    /* filter: brightness(0) saturate(100%) invert(25%) sepia(29%) saturate(238%) hue-rotate(339deg) brightness(98%) contrast(96%); */
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(103%) contrast(103%); */
+}
+
+@media (max-width:1299px) {
+    .th-wrapper {
+        gap: 30px;
+    }
+    .removePadding{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    .th-wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 552px) {
+    .township-row {
+        row-gap: 30px;
+    }
+
+    .th-wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .township-ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

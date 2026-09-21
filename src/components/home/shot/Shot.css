@@ -1,0 +1,35 @@
+#shot {
+  background: url("/images/shot/shotBack.webp") no-repeat center center;
+  background-size: cover;
+  color: #3b3b3b;
+  position: relative;
+}
+
+#shot .page-text-color {
+  text-align: center;
+}
+
+#shot iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 13/9;
+}
+
+#shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  /* height: 350px; */
+}
+@media (max-width: 1200px) {
+  .shot h3 {
+    font-size: 18px;
+  }
+
+  .shot iframe {
+    /* height: 225px; */
+  }
+  .shot iframe {
+    height: 100%;
+  }
+}

@@ -1,0 +1,128 @@
+section#amenities {
+  position: relative;
+  margin: 0px;
+  /* background: linear-gradient(0deg, #FAFAFA, #FAFAFA),
+    linear-gradient(81.12deg, rgba(198, 193, 193, 0.5) -99.17%, rgba(255, 255, 255, 0.5) 140.62%); */
+
+}
+
+
+#amenities .swiper_image_thambnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/17;
+  cursor: pointer;
+}
+
+#amenities .swiper_image_preview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* aspect-ratio: 4/5; */
+  height: calc(100vh - 150px);
+}
+
+#amenities .swiper_preview_item,
+#amenities .swiper-wrapper,
+#amenities .swiper_image_preview {
+  height: 100%;
+}
+
+.ov-list-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 80%;
+  font-size: 26px;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+}
+
+@media screen and (min-width: 1400px) {
+  #amenities .col-md-5 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .amenities-tabs {
+    margin-bottom: 20px;
+  }
+
+  #amenities .amenities-slider {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    /* margin-top: 20px; */
+    /* margin-top: 1.5vh; */
+  }
+
+  #amenities .swiper_image_thambnail {
+    height: 100%;
+    width: 100%;
+  }
+
+  #amenities .swiper_image_thambnail .swiper-wrapper,
+  #amenities .swiper_image_thambnail .swiper-slide,
+  #amenities .swiper_image_thambnail .swipper-item-custom {
+    height: 100%;
+  }
+
+  #amenities .swiper_image_thambnail img {
+    aspect-ratio: unset;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #amenities .sec_title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  #amenities .swiper_image_preview img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .amenities-tabs button {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  #amenities .swiper_preview_item,
+  #amenities .swiper-wrapper,
+  #amenities .swiper_image_preview {
+    height: auto;
+  }
+
+  /* #amenities .swiper_preview_item {
+    aspect-ratio: 16/8;
+  } */
+
+  #amenities .swiper_image_preview img {
+    aspect-ratio: 16/10;
+  }
+
+  .ov-list-label {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 552px) {
+  .amenities-tabs button {
+    font-size: 12px;
+  }
+}
