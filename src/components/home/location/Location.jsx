@@ -1,5 +1,5 @@
 import "./Location.css";
-import { Briefcase, Plane, ShoppingBag, GraduationCap, HeartPulse, Route } from "lucide-react";
+import { LuBriefcase as Briefcase, LuPlane as Plane, LuShoppingBag as ShoppingBag, LuGraduationCap as GraduationCap, LuHeartPulse as HeartPulse, LuRoute as Route } from "react-icons/lu";
 
 const points = [
   { icon: Briefcase, desc: "Well Connected to Prominent IT Parks" },

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Star } from "lucide-react";
+import { LuStar as Star } from "react-icons/lu";
 import "./About.css";
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";

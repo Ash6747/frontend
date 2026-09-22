@@ -1,5 +1,5 @@
 import SectionTitle from "../../common/SectionTitle";
-import { ShieldCheck, Award, Clock, HeartHandshake, ThumbsUp, Star, CheckCircle } from "lucide-react";
+import { LuShieldCheck as ShieldCheck, LuAward as Award, LuClock as Clock, LuHeartHandshake as HeartHandshake, LuThumbsUp as ThumbsUp, LuStar as Star, LuCircleCheck as CheckCircle } from "react-icons/lu";
 
 import "./Promise.css";
 

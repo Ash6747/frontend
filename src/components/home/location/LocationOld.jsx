@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./Location.css";
 
-import { Briefcase, Plane, ShoppingBag, GraduationCap, HeartPulse, Route } from "lucide-react";
+import { LuBriefcase as Briefcase, LuPlane as Plane, LuShoppingBag as ShoppingBag, LuGraduationCap as GraduationCap, LuHeartPulse as HeartPulse, LuRoute as Route } from "react-icons/lu";
 
 const Location1 = Briefcase;
 const Location2 = Plane;

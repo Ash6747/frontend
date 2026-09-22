@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
-import { Phone, Headphones } from "lucide-react";
+import { LuPhone as Phone, LuHeadphones as Headphones } from "react-icons/lu";
 import Image from "../../components/common/Image";
 
 const Header = () => {

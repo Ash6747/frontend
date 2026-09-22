@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
-import { Mail, Phone } from "lucide-react";
+import { LuMail as Mail, LuPhone as Phone } from "react-icons/lu";
 
 const FBIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">

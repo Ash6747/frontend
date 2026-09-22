@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { LuMail as Mail } from "react-icons/lu";
 import "./Footer.css";
 import fetchSharedJson from "../../data/fetchSharedJson";
 

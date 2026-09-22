@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import SectionTitle from "../../common/SectionTitle";
 import "./Philosophy.css";
-import { Compass, Building2, HeartHandshake, Star } from "lucide-react";
+import { LuCompass as Compass, LuBuilding2 as Building2, LuHeartHandshake as HeartHandshake, LuStar as Star } from "react-icons/lu";
 
 const philosophyData = [
   {

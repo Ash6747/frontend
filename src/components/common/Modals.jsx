@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Modal } from "bootstrap";
-import { Phone, Headphones } from "lucide-react";
+import { LuPhone as Phone, LuHeadphones as Headphones } from "react-icons/lu";
 import ContactForm from "./ContactForm";
 
 const WhatsAppIcon = ({ size = 24, className = "" }) => (

@@ -1,4 +1,4 @@
-import { Sun, Moon } from "lucide-react";
+import { LuSun as Sun, LuMoon as Moon } from "react-icons/lu";
 import useTheme from "../../hooks/useTheme";
 
 const ThemeToggle = ({ className = "", size = 20, ...props }) => {

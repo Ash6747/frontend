@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Sun, MoonStar } from "lucide-react";
+import { LuSun as Sun, LuMoonStar as MoonStar } from "react-icons/lu";
 import useTheme from "../../../hooks/useTheme";
 import "./Banner.css";
 

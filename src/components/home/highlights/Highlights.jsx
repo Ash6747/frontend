@@ -3,16 +3,16 @@ import { useEffect, useState, useRef } from "react";
 import "./Highlights.css";
 
 import {
-  Building2,
-  Building,
-  Layers,
-  Maximize2,
-  ArrowUpDown,
-  Landmark,
-  Sparkles,
-  DoorOpen,
-  Star,
-} from "lucide-react";
+  LuBuilding2 as Building2,
+  LuBuilding as Building,
+  LuLayers as Layers,
+  LuMaximize2 as Maximize2,
+  LuArrowUpDown as ArrowUpDown,
+  LuLandmark as Landmark,
+  LuSparkles as Sparkles,
+  LuDoorOpen as DoorOpen,
+  LuStar as Star,
+} from "react-icons/lu";
 
 const Highlights = () => {
   const [isMobile, setIsMobile] = useState(false);

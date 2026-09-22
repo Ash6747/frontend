@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { LuArrowRight as ArrowRight } from "react-icons/lu";
 
 const PageBtn = ({ type = "", text, isPdf, isSubmit, className = '' }) => {
   const btnRef = useRef(null);

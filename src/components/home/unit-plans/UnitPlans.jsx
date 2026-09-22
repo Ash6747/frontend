@@ -1,5 +1,5 @@
 import "./UnitPlans.css";
-import { Sparkles, Star } from "lucide-react";
+import { LuSparkles as Sparkles, LuStar as Star } from "react-icons/lu";
 
 const UnitPlans = () => {
   const bhkPlans = [

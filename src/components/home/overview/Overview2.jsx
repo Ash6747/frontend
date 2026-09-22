@@ -1,6 +1,6 @@
 import React from 'react'
 import './Overview2.css'
-import { Star } from 'lucide-react'
+import { LuStar as Star } from 'react-icons/lu'
 import PageBtn from '../../common/PageBtn'
 
 const Overview2 = () => {
