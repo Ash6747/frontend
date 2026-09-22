@@ -1,11 +1,5 @@
-import { lazy, Suspense } from "react";
 import "./UnitPlans.css";
-
-const BuildingIcon = lazy(() => import("../../../assets/svg/BuildingIcon"));
-const StarIcon = lazy(() => import("../../../assets/svg/StarIcon"));
-const AxisIcon = lazy(() => import("../../../assets/svg/AxisIcon"));
-const Star = lazy(() => import("../../../assets/svg/Star"));
-const StarFill = lazy(() => import("../../../assets/svg/StarFill"));
+import { Sparkles, Star } from "lucide-react";
 
 const UnitPlans = () => {
   const bhkPlans = [
@@ -41,29 +35,29 @@ const UnitPlans = () => {
 
   const overviewList = [
     {
-      icon: StarFill,
-      breakIcon: StarIcon,
+      icon: Sparkles,
+      breakIcon: Star,
       title: "Prive Villa",
       area: "1835.80 Sq.Ft",
       // description: "Exclusive residences crafted for privacy, sophistication, and modern family living.",
     },
     {
-      icon: StarFill,
-      breakIcon: StarIcon,
+      icon: Sparkles,
+      breakIcon: Star,
       title: "Prive Villa Max",
       area: "2044.73 Sq.Ft",
       // description: "The most spacious villa collection designed for an unmatched luxury lifestyle.",
     },
     {
-      icon: StarFill,
-      breakIcon: StarIcon,
+      icon: Sparkles,
+      breakIcon: Star,
       title: "Aristo Villa",
       area: "2453.22 Sq.Ft",
       // description: "Elegant private villa residences thoughtfully designed with expansive layouts and premium living experiences.",
     },
     {
-      icon: StarFill,
-      breakIcon: StarIcon,
+      icon: Sparkles,
+      breakIcon: Star,
       title: "Aristo Villa Max",
       area: "2531.37 Sq.Ft",
       // description: "Enhanced villa residences offering larger spaces, refined interiors, and elevated luxury.",
@@ -71,11 +65,10 @@ const UnitPlans = () => {
   ];
 
   return (
-    <Suspense fallback={null}>
-      <section
-        id="floor_plan"
-        className="unitplans-section"
-      >
+    <section
+      id="floor_plan"
+      className="unitplans-section"
+    >
         <div className="unitplans_content side-space section-space">
           <div className="row justify-content-center ">
             <div className="col-12 col-lg-9">
@@ -97,7 +90,7 @@ const UnitPlans = () => {
               return (
                 <li className="ov-list-item" key={index} data-aos="fade-up" data-aos-duration="800" data-aos-delay={100 + index * 100}>
                   <div className="ov-list-icon">
-                    <Icon />
+                    <Icon size={24} />
                   </div>
 
                   <h3 className="ov-list-title">
@@ -108,7 +101,7 @@ const UnitPlans = () => {
                   </h5> */}
 
                   <span className="ov-list-break">
-                    <BreakIcon />
+                    <BreakIcon size={16} fill="currentColor" />
                   </span>
 
                   {/* <p className="ov-list-desc">
@@ -120,7 +113,6 @@ const UnitPlans = () => {
           </ul>
         </div>
       </section>
-    </Suspense>
   );
 };
 

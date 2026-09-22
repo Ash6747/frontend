@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
-import Connect from "../../assets/images/general/Connect";
-import Call from "../../assets/images/general/Call";
-import VTPLuxeLogo from "../../assets/images/general/VTPLuxeLogo";
+import { Phone, Headphones } from "lucide-react";
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -103,7 +101,7 @@ const Header = () => {
         <header id="header" className={`header ${isMobile ? "sticky" : (isFirstSectionOut ? (isVisible ? "sticky" : "hidden") : "")}`}>
           <nav className="navbar navbar-expand-lg side-space header_spacing m-auto mt-0 mb-2 mb-lg-0" data-aos="fade-up">
             <Link className="vtplogo" to="/" aria-label="Chrysos VTP Luxe Home" onClick={scrollToTop}>
-              <VTPLuxeLogo />
+              {/* <VTPLuxeLogo /> */}
             </Link>
 
             <span className="golden-dot"></span>
@@ -149,7 +147,7 @@ const Header = () => {
               <ul className="header-btn-container flex-md-row flex-column">
                 <li>
                   <a href="tel:07969292616" className="phone-btn gradient-border-mask center-flex" aria-label="Call sales at 07969292616">
-                    <Call />
+                    <Phone size={15} />
                     07969292616
                   </a>
                 </li>
@@ -162,7 +160,7 @@ const Header = () => {
                   >
                     <span>
                       Expert Assist
-                      <Connect />
+                      <Headphones size={16} />
                     </span>
                   </button>
                 </li>

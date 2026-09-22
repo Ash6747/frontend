@@ -278,6 +278,11 @@ li.nav-item:last-child {
     fill: #fff;
 }
 
+.phone-btn svg.lucide path,
+.phone-btn:hover svg.lucide path {
+    fill: none !important;
+}
+
 .header-btn {
     gap: 5px;
     overflow: hidden;
@@ -340,6 +345,11 @@ li.nav-item:last-child {
 
 .header-btn span svg path {
     fill: #B8846D;
+}
+
+.header-btn span svg.lucide path,
+.header-btn:hover span svg.lucide path {
+    fill: none !important;
 }
 
 .header-btn span .separator {

@@ -1,20 +1,13 @@
-import { lazy, Suspense } from "react";
 import "./Location.css";
-
-const Location1 = lazy(() => import("../../../assets/svg/Location1"));
-const Location2 = lazy(() => import("../../../assets/svg/Location2"));
-const Location3 = lazy(() => import("../../../assets/svg/Location3"));
-const Location4 = lazy(() => import("../../../assets/svg/Location4"));
-const Location5 = lazy(() => import("../../../assets/svg/Location5"));
-const Location6 = lazy(() => import("../../../assets/svg/Location6"));
+import { Briefcase, Plane, ShoppingBag, GraduationCap, HeartPulse, Route } from "lucide-react";
 
 const points = [
-  { icon: Location1, desc: "Well Connected to Prominent IT Parks" },
-  { icon: Location2, desc: "Swift Access To Pune International Airport" },
-  { icon: Location3, desc: "Effortlessly Connected To Shopping Complexes" },
-  { icon: Location4, desc: "Minutes Away From Top International Schools" },
-  { icon: Location5, desc: "Convenient Access To Major Healthcare Centers" },
-  { icon: Location6, desc: "Seamless Access to National Highway" },
+  { icon: Briefcase, desc: "Well Connected to Prominent IT Parks" },
+  { icon: Plane, desc: "Swift Access To Pune International Airport" },
+  { icon: ShoppingBag, desc: "Effortlessly Connected To Shopping Complexes" },
+  { icon: GraduationCap, desc: "Minutes Away From Top International Schools" },
+  { icon: HeartPulse, desc: "Convenient Access To Major Healthcare Centers" },
+  { icon: Route, desc: "Seamless Access to National Highway" },
 ];
 
 const Location = () => {
@@ -23,8 +16,7 @@ const Location = () => {
   const currentPoints = points;
 
   return (
-    <Suspense fallback={null}>
-      <section id="location_wrapper" className="location-section section-space side-space">
+    <section id="location_wrapper" className="location-section section-space side-space">
 
         <div className="location-container">
           <div className="title-wrapper mx-auto text-center mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -47,7 +39,7 @@ const Location = () => {
                   return (
                     <li className="location-item" key={index} data-aos="fade-right" data-aos-duration="800" data-aos-delay={100 + index * 100}>
                       <div className="location-item-icon">
-                        <Icon />
+                        <Icon size={22} color="#fff" />
                       </div>
                       <p>
                         {location.time && (
@@ -87,7 +79,7 @@ const Location = () => {
                   {currentPoints.map((item, j) => (
                     <div key={j} className={`timeline-point-mobile tpm-${j + 1}`} data-aos="fade-up" data-aos-duration="800" data-aos-delay={100 + j * 50}>
                       <div className="location-icon">
-                        <item.icon />
+                        <item.icon size={22} color="#fff" />
                       </div>
                       <div className="content_parent">
                         {item.time && (<p className="time">{item.time}</p>)}
@@ -106,7 +98,7 @@ const Location = () => {
                   return (
                     <li className="location-item" key={index} data-aos="fade-left" data-aos-duration="800" data-aos-delay={100 + index * 100}>
                       <div className="location-item-icon">
-                        <Icon />
+                        <Icon size={22} color="#fff" />
                       </div>
                       <p>
 
@@ -131,7 +123,7 @@ const Location = () => {
                   return (
                     <li className="location-item" key={index} data-aos="fade-left" data-aos-duration="800" data-aos-delay={100 + index * 100}>
                       <div className="location-item-icon">
-                        <Icon />
+                        <Icon size={22} color="#fff" />
                       </div>
                       <p>
 
@@ -151,7 +143,6 @@ const Location = () => {
           </div>
         </div>
       </section>
-    </Suspense>
   );
 };
 

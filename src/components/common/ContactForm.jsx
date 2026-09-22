@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from "react";
+import { ArrowRight } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CountryCodes from "../../data/CountryCodes";
@@ -8,7 +9,6 @@ import axios from "axios";
 import parsePhoneNumberFromString from "libphonenumber-js";
 import Widget from "./TurnstileWidget";
 import { dialCodeToCountryISO } from "../../data/DialCodes";
-const ArrowRightIcon = lazy(() => import("../../assets/svg/ArrowRightIcon"));
 // import top from "../../assets/images/enquiry/top.svg";
 // import bottom from "../../assets/images/enquiry/bottom.svg";
 
@@ -416,7 +416,7 @@ const ContactForm = ({ onClick, closePopup }) => {
 
                     <button type="button" className="vtp-btn nextbtn" onClick={handleBack} disabled={!selectedOption}>
                       <span className="vtp-btn-text custm-btn">
-                        Next <ArrowRightIcon />
+                        Next <ArrowRight size={16} />
                       </span>
                     </button>
                     

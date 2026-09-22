@@ -1,20 +1,8 @@
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Overview.css";
-
-const StarIcon = lazy(() => import("../../../assets/svg/StarIcon"));
-const SunIcon = lazy(() => import("../../../assets/svg/SunIcon"));
-const Star = lazy(() => import("../../../assets/svg/Star"));
-const AxisIcon = lazy(() => import("../../../assets/svg/AxisIcon"));
-const BuildingIcon = lazy(() => import("../../../assets/svg/BuildingIcon"));
-const ElavatorIcon = lazy(() => import("../../../assets/svg/ElavatorIcon"));
-const BedIcon = lazy(() => import("../../../assets/svg/BedIcon"));
-const FloorIcon = lazy(() => import("../../../assets/svg/FloorIcon"));
-const ZoneIcon = lazy(() => import("../../../assets/svg/ZoneIcon"));
-const BalconyIcon = lazy(() => import("../../../assets/svg/BalconyIcon"));
-const KichenIcon = lazy(() => import("../../../assets/svg/KichenIcon"));
-const BathIcon = lazy(() => import("../../../assets/svg/BathIcon"));
+import { Star } from "lucide-react";
 import PageBtn from "../../common/PageBtn";
 import ClubhouseVideo from "./ClubhouseVideo";
 
@@ -27,63 +15,8 @@ const Overview = () => {
     });
   }, []);
 
-  const overviewList = [
-    {
-      icon: BuildingIcon,
-      breakIcon: StarIcon,
-      title: "Double Height Living",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: FloorIcon,
-      breakIcon: StarIcon,
-      title: "Floor-to-Ceiling Glass",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: ElavatorIcon,
-      breakIcon: StarIcon,
-      title: "Private Elevator in Every Home",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: BedIcon,
-      breakIcon: StarIcon,
-      title: "Master Suites",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-  ];
-
-  const overviewList2 = [
-    {
-      icon: ZoneIcon,
-      breakIcon: StarIcon,
-      title: "A clubhouse that curves like a signature across the sky",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: BalconyIcon,
-      breakIcon: StarIcon,
-      title: "Conceived, not merely constructed",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: KichenIcon,
-      breakIcon: StarIcon,
-      title: "Two storeys of glass that never draw the curtains on the view",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-    {
-      icon: BathIcon,
-      breakIcon: StarIcon,
-      title: "Celebrations, fitness, quiet mornings, unhurried evenings",
-      description: "A lifestyle that exists beyond the ordinary.",
-    },
-  ];
-
   return (
-    <Suspense fallback={null}>
-      <div
+    <div
         id="about-cygnus"
         className="about-cygnus-container"
       >
@@ -237,7 +170,6 @@ const Overview = () => {
           </ul> */}
         </section>
       </div>
-    </Suspense>
   );
 };
 

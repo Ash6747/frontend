@@ -1,12 +1,10 @@
-import { useState, useMemo, useRef, useEffect, lazy, Suspense } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs, Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import './HighlightGallery.css';
-
-const Star = lazy(() => import('../../../assets/svg/Star'));
 
 
 const HighlightGallery = () => {
@@ -111,9 +109,7 @@ const HighlightGallery = () => {
                                             loading="lazy"
                                         />
                                         <div className="image_thambnail_icon">
-                                            <Suspense fallback={null}>
-                                                <Star />
-                                            </Suspense>
+                                            <Star size={16} fill="currentColor" />
                                         </div>
                                     </div>
                                     <div className="thambnail-content">

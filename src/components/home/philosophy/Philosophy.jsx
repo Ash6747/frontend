@@ -1,4 +1,3 @@
-import { lazy, Suspense } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -6,25 +5,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import SectionTitle from "../../common/SectionTitle";
 import "./Philosophy.css";
-
-const StarIcon = lazy(() => import("../../../assets/svg/StarIcon"));
-const BetterDesignIcon = lazy(() => import("../../../assets/svg/BetterDesignIcon"));
-const BetterBuildIcon = lazy(() => import("../../../assets/svg/BetterBuildIcon"));
-const BetterCareIcon = lazy(() => import("../../../assets/svg/BetterCareIcon"));
+import { Compass, Building2, HeartHandshake, Star } from "lucide-react";
 
 const philosophyData = [
   {
-    icon: BetterDesignIcon,
+    icon: Compass,
     animation: "fade-right",
     alt: "VTP Realty philosophy – trust, quality and innovation in real estate",
   },
   {
-    icon: BetterBuildIcon,
+    icon: Building2,
     animation: "fade-up",
     alt: "VTP Realty philosophy – creating value homes with modern amenities",
   },
   {
-    icon: BetterCareIcon,
+    icon: HeartHandshake,
     animation: "fade-left",
     alt: "VTP Realty philosophy – better design and lifestyle amenities",
   },
@@ -47,7 +42,7 @@ const PhilosophyCard = ({ item, icon: Icon, delay, animation }) => {
           <h4 className="philosophy-h4">{item.title}</h4>
 
           <span className="ov-list-break">
-            <StarIcon />
+            <Star size={16} fill="currentColor" />
           </span>
 
           <p>{item.description}</p>
@@ -63,8 +58,7 @@ const BrandPhilosophy = ({ data }) => {
   const brandData = data?.brandData || [];
 
   return (
-    <Suspense fallback={null}>
-      <section className="brand-philosophy-wrapper section-space side-space">
+    <section className="brand-philosophy-wrapper section-space side-space">
 
         {/* Title */}
         <div className="text-center p-0 philosophy-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -94,7 +88,6 @@ const BrandPhilosophy = ({ data }) => {
         </div>
 
       </section>
-    </Suspense>
   );
 };
 

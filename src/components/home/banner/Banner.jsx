@@ -73,7 +73,7 @@ const Banner = () => {
           src="/videos/banner/logo-light.svg"
           alt="Chrysos VTP Luxe Project Logo"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
           height="100%"
           width="100%"
         />
@@ -125,14 +125,14 @@ const Banner = () => {
                     // >
                     <img
                       src={banner.src}
-                      fetchpriority="high"
+                      fetchPriority="high"
                       alt={banner.alt}
                     />
                     // </a>
                   ) : (
                     <img
                       src={banner.src}
-                      fetchpriority="high"
+                      fetchPriority="high"
                       alt={banner.alt}
                     />
                   )}

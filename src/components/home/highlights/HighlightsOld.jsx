@@ -7,21 +7,27 @@ import "./Highlights.css";
 import HighlightGallery from "./HighlightGallery";
 import PageBtn from "../../common/PageBtn";
 
-const StarIcon = lazy(() => import("../../../assets/svg/StarIcon"));
-const Towers4 = lazy(() => import("../../../assets/svg/Towers4"));
-const Mins5 = lazy(() => import("../../../assets/svg/Mins5"));
-const ClassicDesign = lazy(() => import("../../../assets/svg/ClassicDesign"));
-const NextToBaif = lazy(() => import("../../../assets/svg/NextToBaif"));
-const MajesticAmenities = lazy(() =>
-  import("../../../assets/svg/MajesticAmenities")
-);
-const PrivacyOpenViews = lazy(() =>
-  import("../../../assets/svg/PrivacyOpenViews")
-);
-const Lush = lazy(() => import("../../../assets/svg/Lush"));
-const TownshipLiving = lazy(() =>
-  import("../../../assets/svg/TownshipLiving")
-);
+import {
+  Building2,
+  Building,
+  Layers,
+  Maximize2,
+  ArrowUpDown,
+  Landmark,
+  Sparkles,
+  DoorOpen,
+  Star,
+} from "lucide-react";
+
+const StarIcon = Star;
+const Towers4 = Building2;
+const Mins5 = ArrowUpDown;
+const ClassicDesign = Landmark;
+const NextToBaif = Layers;
+const MajesticAmenities = Sparkles;
+const PrivacyOpenViews = Maximize2;
+const Lush = Building;
+const TownshipLiving = DoorOpen;
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -153,6 +153,10 @@ a.email-info {
     fill: #fff;
 }
 
+.fc_li svg.lucide path {
+    fill: none;
+}
+
 .fc_li .separator {
     height: 1px;
     width: 100%;

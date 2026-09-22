@@ -1,9 +1,5 @@
-import { useRef, lazy, Suspense } from "react";
-import Pdf from "../../assets/images/general/pdf";
-
-const PageBtnBg = lazy(() => import("../../assets/svg/PageBtnBg"));
-const PageBtnArrow = lazy(() => import("../../assets/svg/PageBtnArrow"));
-const Submit = lazy(() => import("../../assets/images/general/Submit"));
+import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
 
 const PageBtn = ({ type="", text, isPdf, isSubmit, className='' }) => {
   const btnRef = useRef(null);
@@ -20,20 +16,9 @@ const PageBtn = ({ type="", text, isPdf, isSubmit, className='' }) => {
         localStorage.setItem("downloadBrochure", "yes");
       }}
     >
-
-      {type === "gold" && (
-        <Suspense fallback={null}>
-          <PageBtnBg
-            className="page_btn-bg"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-            focusable="false"
-          />
-        </Suspense>
-      )}
       <div className="page_btn-content center-flex">
         <span className={`page_btn-text ${type === "gold" ? "gold-text" : ""}`}>
-          {text} {isPdf && <Suspense fallback={null}><PageBtnArrow /></Suspense>} {isSubmit && <Suspense fallback={null}><Submit /></Suspense>}
+          {text} {(isPdf || isSubmit) && <ArrowRight size={18} className="ms-2" />}
         </span>
       </div>
     </button>

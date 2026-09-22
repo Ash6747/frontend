@@ -1,10 +1,19 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import SectionTitle from "../../common/SectionTitle";
 
-const SnapshotFrame = lazy(() => import("../../../assets/svg/SnapshotFrame"));
-const SnapshotPilar = lazy(() => import("../../../assets/svg/SnapshotPilar"));
+const SnapshotFrame = ({ className = "" }) => (
+  <svg viewBox="0 0 200 235" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <rect x="1" y="1" width="198" height="233" rx="10" stroke="currentColor" strokeOpacity="0.2" />
+  </svg>
+);
+
+const SnapshotPilar = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <line x1="12" y1="2" x2="12" y2="22" />
+  </svg>
+);
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -28,8 +37,7 @@ const BrandSnapshots = ({ data }) => {
   const stats = data?.aboutCounter || [];
 
   return (
-    <Suspense fallback={null}>
-      <div className="brand-snapshots-wrapper text-center side-space">
+    <div className="brand-snapshots-wrapper text-center side-space">
         <div className="mb-md-5 mb-3">
           <SectionTitle text="VTP BRAND SNAPSHOTS" />
         </div>
@@ -131,7 +139,6 @@ const BrandSnapshots = ({ data }) => {
           )}
         </div>
       </div>
-    </Suspense>
   );
 };
 

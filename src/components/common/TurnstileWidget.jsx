@@ -32,7 +32,7 @@ export default function Widget({ onSuccess, onError }) {
             siteKey={site_key}
             onSuccess={handleSuccess}
             onError={onError}
-            options={{ refreshExpired: "auto" }}
+            options={{ refreshExpired: "auto" }}
         />
     )
 }

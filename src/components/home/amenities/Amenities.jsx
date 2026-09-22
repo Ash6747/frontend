@@ -6,7 +6,6 @@ import "swiper/css/autoplay";
 import { Navigation, EffectFade, Autoplay } from "swiper/modules";
 
 import "./Amenities.css";
-const StarIcon = lazy(() => import("../../../assets/svg/StarIcon"));
 
 const Amenities = () => {
   const [activeTab, setActiveTab] = useState("west");

@@ -1,32 +1,23 @@
-import { lazy, Suspense } from "react";
 import SectionTitle from "../../common/SectionTitle";
+import { ShieldCheck, Award, Clock, HeartHandshake, ThumbsUp, Star, CheckCircle } from "lucide-react";
 
 import "./Promise.css";
 
-const Promise1 = lazy(() => import("../../../assets/images/promise/Promise1"));
-const Promise2 = lazy(() => import("../../../assets/images/promise/Promise2"));
-const Promise3 = lazy(() => import("../../../assets/images/promise/Promise3"));
-const Promise4 = lazy(() => import("../../../assets/images/promise/Promise4"));
-const Promise5 = lazy(() => import("../../../assets/images/promise/Promise5"));
-const Promise6 = lazy(() => import("../../../assets/images/promise/Promise6"));
-const Promise7 = lazy(() => import("../../../assets/images/promise/Promise7"));
-
 const iconComponents = [
-  <Promise1 />,
-  <Promise2 />,
-  <Promise3 />,
-  <Promise4 />,
-  <Promise5 />,
-  <Promise6 />,
-  <Promise7 />,
+  <ShieldCheck key="p1" size={40} />,
+  <Award key="p2" size={40} />,
+  <Clock key="p3" size={40} />,
+  <HeartHandshake key="p4" size={40} />,
+  <ThumbsUp key="p5" size={40} />,
+  <Star key="p6" size={40} />,
+  <CheckCircle key="p7" size={40} />,
 ];
 
 const Promise = ({ data }) => {
   const brandData = data?.brandData || [];
 
   return (
-    <Suspense fallback={null}>
-      <section id="promise" className="promise-section section-space side-space">
+    <section id="promise" className="promise-section section-space side-space">
         {/* DESKTOP */}
         <div className="row p-0 promise-row g-3 desktop">
           {/* LEFT column */}
@@ -98,7 +89,6 @@ const Promise = ({ data }) => {
           ))}
         </div>
       </section>
-    </Suspense>
   );
 };
 

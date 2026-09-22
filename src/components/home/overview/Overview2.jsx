@@ -1,13 +1,11 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import './Overview2.css'
+import { Star } from 'lucide-react'
 import PageBtn from '../../common/PageBtn'
-
-const StarIcon = lazy(() => import('../../../assets/svg/StarIcon'))
 
 const Overview2 = () => {
     return (
-        <Suspense fallback={null}>
-            <section id='overview' className="overview-section side-space" >
+        <section id='overview' className="overview-section side-space" >
                 {/* <img
                     src="/images/overview/ove-bg.webp"
                     alt=""
@@ -39,7 +37,7 @@ const Overview2 = () => {
                                 Some residences rise high and stop there. Chrysos by VTP Luxe rises and expands, towering villas in the sky, in the tallest tower of the area, planned across two levels and the kind of low-density privacy that keeps the home beautifully removed from the shared nature of typical high-rise living. This is luxury that respects your life and your preference for space that stays yours.
                             </p>
                             <span className="ov-list-break" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                <StarIcon />
+                                <Star size={16} fill="currentColor" />
                             </span>
                             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
                                 At VTP Realty, ultra-luxury has always meant more than a finer finish or a larger home. It is measured in planning that stays relevant year after year and craftsmanship that holds its grace.
@@ -52,7 +50,6 @@ const Overview2 = () => {
                 </div>
 
             </section>
-        </Suspense>
     )
 }
 

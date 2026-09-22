@@ -3,12 +3,14 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./Location.css";
 
-const Location1 = lazy(() => import("../../../assets/svg/Location1"));
-const Location2 = lazy(() => import("../../../assets/svg/Location2"));
-const Location3 = lazy(() => import("../../../assets/svg/Location3"));
-const Location4 = lazy(() => import("../../../assets/svg/Location4"));
-const Location5 = lazy(() => import("../../../assets/svg/Location5"));
-const Location6 = lazy(() => import("../../../assets/svg/Location6"));
+import { Briefcase, Plane, ShoppingBag, GraduationCap, HeartPulse, Route } from "lucide-react";
+
+const Location1 = Briefcase;
+const Location2 = Plane;
+const Location3 = ShoppingBag;
+const Location4 = GraduationCap;
+const Location5 = HeartPulse;
+const Location6 = Route;
 
 gsap.registerPlugin(ScrollTrigger);
 
