@@ -78,10 +78,10 @@ const AmenitiesNew = () => {
     activeTab === "gallery"
       ? slides
       : activeTab === "exterior"
-      ? slides2
-      : activeTab === "interior"
-      ? slides3
-      : [];
+        ? slides2
+        : activeTab === "interior"
+          ? slides3
+          : [];
 
   return (
     <section id="Gallery" className="gallery side-space pe-lg-0">
@@ -111,7 +111,7 @@ const AmenitiesNew = () => {
             >
               <li className="nav-item" role="presentation">
                 <button
-                  className={`nav-link ${activeTab === "exterior" ? "active" : ""}`}
+                  className={`btn ${activeTab === "exterior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("exterior");
                     setCurrentIndex(1);
@@ -124,7 +124,7 @@ const AmenitiesNew = () => {
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className={`nav-link ${activeTab === "interior" ? "active" : ""}`}
+                  className={`btn ${activeTab === "interior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("interior");
                     setCurrentIndex(1);
@@ -137,7 +137,7 @@ const AmenitiesNew = () => {
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className={`nav-link ${activeTab === "gallery" ? "active" : ""}`}
+                  className={`btn ${activeTab === "gallery" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("gallery");
                     setCurrentIndex(1);

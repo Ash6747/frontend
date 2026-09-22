@@ -61,7 +61,7 @@ const ProjectLayout = () => {
               </h2>
               <p className="vtp-tagline">Crafted For Exceptional Living</p>
               <p className="plans-box mb-3">2 & 3 BED Premium homes</p>
-              <div className="btn-overiew">
+              <div className="page-btn-overiew">
                 <PageBtn type="gold" text="Ask For Price" isSubmit={true} />
               </div>
             </div>

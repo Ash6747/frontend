@@ -71,7 +71,7 @@ span.text-end {
 .footer-bottom .qr_info,
 .footer-bottom .qr_info a {
     font-weight: 400 !important;
-    font-family: Great-Book;
+    font-family: Montserrat, sans-serif;
 }
 
 .footer-bottom-text {
@@ -92,7 +92,7 @@ span.text-end {
 }
 
 .footer-bottom a {
-    font-family: Great-Book;
+    font-family: Montserrat, sans-serif;
     color: #fff;
     line-height: 23px;
     font-weight: 400;
@@ -133,7 +133,7 @@ a.email-info {
 }
 
 .footer-bottom span {
-    font-family: Great-Book, sans-serif !important;
+    font-family: Montserrat, sans-serif !important;
 }
 
 .footer-bottom .qr_info {
@@ -165,16 +165,16 @@ a.email-info {
 }
 
 .fc_title {
-    font-family: Great-Book, sans-serif;
+    font-family: Beliau, sans-serif;
     text-transform: uppercase;
     font-weight: 700 !important;
 }
 
 .fc_subtitle {
     /* font-size: 10px; */
-    font-weight: 300 !;
+    font-weight: 300;
     font-size: 13px;
-    font-family: Great-Book, sans-serif !important;
+    font-family: Montserrat, sans-serif !important;
 }
 
 .footer_contact_ul .fc_li a.main {

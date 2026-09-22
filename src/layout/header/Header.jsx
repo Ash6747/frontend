@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
 import { Phone, Headphones } from "lucide-react";
+import Image from "../../components/common/Image";
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -89,19 +90,10 @@ const Header = () => {
   return (
     <>
       <div className="header-wrapper">
-        {/* <ul className="project-high">
-          <li>Biggest Launch of Pune</li>
-          <li><span className="separator"></span></li>
-          <li>European Design With Modern Aesthetics</li>
-          <li><span className="separator"></span></li>
-          <li>Majestic Amenities For All Age Group</li>
-          <li><span className="separator"></span></li>
-          <li>Prime location</li>
-        </ul> */}
         <header id="header" className={`header ${isMobile ? "sticky" : (isFirstSectionOut ? (isVisible ? "sticky" : "hidden") : "")}`}>
           <nav className="navbar navbar-expand-lg side-space header_spacing m-auto mt-0 mb-2 mb-lg-0" data-aos="fade-up">
             <Link className="vtplogo" to="/" aria-label="Chrysos VTP Luxe Home" onClick={scrollToTop}>
-              {/* <VTPLuxeLogo /> */}
+              <Image src="/logo.png" fallbackSrc="/logo.png" alt="project logo" />
             </Link>
 
             <span className="golden-dot"></span>
@@ -145,23 +137,24 @@ const Header = () => {
                 ))}
               </ul>
               <ul className="header-btn-container flex-md-row flex-column">
-                <li>
-                  <a href="tel:07969292616" className="phone-btn gradient-border-mask center-flex" aria-label="Call sales at 07969292616">
+                {/* <li>
+                  <a
+                    href="tel:07969292616"
+                    className="page-btn btn-secondary center-flex"
+                    aria-label="Call sales at 07969292616"
+                  >
                     <Phone size={15} />
                     07969292616
                   </a>
-                </li>
-                <li className="btn-hide">
+                </li> */}
+                <li className="page-btn-hide">
                   <button
-                    className="header-btn"
+                    className="page-btn primary center-flex"
                     data-bs-toggle="modal"
                     data-bs-target="#enquirynowmodal"
-                    aria-label="Open Expert Assist enquiry form modal"
+                    aria-label="Open Schedule a Visit enquiry form modal"
                   >
-                    <span>
-                      Expert Assist
-                      <Headphones size={16} />
-                    </span>
+                    Schedule a Visit
                   </button>
                 </li>
               </ul>

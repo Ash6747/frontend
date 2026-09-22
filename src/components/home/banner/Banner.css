@@ -19,7 +19,7 @@
 }
 
 .BannerTitleMain {
-  font-family: Great-Book;
+  font-family: Beliau, sans-serif;
 }
 
 /* .ban-logo {
@@ -334,7 +334,7 @@
 
 @media (max-width: 992px) {
   .banner_section {
-    margin-top: 76px;
+    margin-top: 56px;
   }
 
   .ban-logo {
@@ -396,5 +396,130 @@
 
   .banner_image h2 {
     line-height: 1.1;
+  }
+}
+
+.banner-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* THEME SWITCH BUTTON (LIGHT / DARK) */
+/* ------------------------------------------------------------------------------------------ */
+
+.banner-theme-switch-wrapper {
+  position: absolute;
+  bottom: 45px;
+  right: 6%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-theme-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96px;
+  height: 48px;
+  padding: 4px;
+  border-radius: 9999px;
+  background: rgba(30, 32, 28, 0.48);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  user-select: none;
+}
+
+.banner-theme-switch:hover {
+  transform: scale(1.04);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.banner-theme-switch:active {
+  transform: scale(0.97);
+}
+
+.switch-knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.12));
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.switch-knob.dark {
+  transform: translateX(48px);
+}
+
+.switch-icon-box {
+  position: relative;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.switch-icon-box.sun {
+  color: #FFA726;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.switch-icon-box.sun.active {
+  color: #FFA726;
+  opacity: 1;
+  transform: scale(1);
+  filter: drop-shadow(0 0 7px rgba(255, 167, 38, 0.85));
+}
+
+.switch-icon-box.moon {
+  color: #FFFFFF;
+  opacity: 0.85;
+  transform: scale(0.95);
+}
+
+.switch-icon-box.moon.active {
+  color: #FFFFFF;
+  opacity: 1;
+  transform: scale(1);
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.9));
+}
+
+@media (max-width: 768px) {
+  .banner-theme-switch-wrapper {
+    bottom: 25px;
+    right: 20px;
   }
 }

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     .sec_title, .sec_title span{
-        font-family: Great-Book, sans-serif;
+        font-family: Beliau, sans-serif;
     }
     position: relative;
 }
@@ -39,7 +39,7 @@
     background: linear-gradient(90deg, rgba(103, 56, 40, 1) 0%, rgba(188, 130, 110, 1) 25%, rgba(221, 189, 170, 1) 50%, rgba(188, 130, 110, 1) 72%, rgba(103, 56, 40, 1) 100%);
     border-radius: 15px;
     .sec_title, .sec_title span{
-        font-family: Great-Book, sans-serif;
+        font-family: Beliau, sans-serif;
         color: #fff;
         background: radial-gradient(circle, #FFFFFF 0%, #c7c7c7 100%);
         background: radial-gradient(circle, #FFFFFF 0%, #fff 100%);

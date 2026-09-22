@@ -346,35 +346,35 @@ const ContactForm = ({ onClick, closePopup }) => {
   return (
     <div className="lead-section">
       {/* --- Selection Checkboxes --- */}
-        <Formik
-          initialValues={initialValues}
-          validationSchema={getValidationSchema()}
-          onSubmit={async (values, { setSubmitting }) => {
-            try {
-              await handlerSubmit(values);
-            } catch (error) {
-              console.error("Form submission error:", error);
-            } finally {
-              setSubmitting(false);
-            }
-          }}
-        >
-          {({ isSubmitting, setFieldValue, values }) => {
-            return (
-              <>
-                {!showForm ? 
-                  <div className="option-selector mb-4">
-                    <div className="options-list">
-                      <div className="form-check d-flex align-items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="directProgram"
-                          checked={selectedOption === "directProgram"}
-                          onChange={() => handleOptionSelect("directProgram")}
-                          className="form-check-input"
-                        />
-                        <label htmlFor="directProgram" className="form-check-label">
-                          {/* Join the <strong> VTP Direct Program </strong> for a no follow up experience! Get your exclusive coupon code for exciting offers and share it during your visit to our project site office. <strong>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={getValidationSchema()}
+        onSubmit={async (values, { setSubmitting }) => {
+          try {
+            await handlerSubmit(values);
+          } catch (error) {
+            console.error("Form submission error:", error);
+          } finally {
+            setSubmitting(false);
+          }
+        }}
+      >
+        {({ isSubmitting, setFieldValue, values }) => {
+          return (
+            <>
+              {!showForm ?
+                <div className="option-selector mb-4">
+                  <div className="options-list">
+                    <div className="form-check d-flex align-items-center gap-2">
+                      <input
+                        type="checkbox"
+                        id="directProgram"
+                        checked={selectedOption === "directProgram"}
+                        onChange={() => handleOptionSelect("directProgram")}
+                        className="form-check-input"
+                      />
+                      <label htmlFor="directProgram" className="form-check-label">
+                        {/* Join the <strong> VTP Direct Program </strong> for a no follow up experience! Get your exclusive coupon code for exciting offers and share it during your visit to our project site office. <strong>
                             <a
                               href="#"
                               data-bs-toggle="modal"
@@ -385,171 +385,171 @@ const ContactForm = ({ onClick, closePopup }) => {
                             </a>
                           </strong> */}
 
-                            To protect your privacy and peace of mind, the <strong> VTP Direct Program </strong> offers a no-follow-up experience. Customers enrolled in the program will receive an <strong> additional discount over and above all ongoing offers </strong> at VTP Realty. You will get exclusive coupon code after form submission. Share it only at the project site office reception. <strong>
-                            <a
-                              href="#"
-                              data-bs-toggle="modal"
-                              data-bs-target="#termsModal"
-                              className="text-decoration-underline  bold-text"
-                            >
-                              <strong>Program Guidelines</strong>
-                            </a>
-                          </strong>
-                        </label>
-                      </div>
-
-                      <h5 className="my-2 text-center">OR</h5>
-
-                      <div className="form-check d-flex align-items-center gap-2 mb-2">
-                        <input
-                          type="checkbox"
-                          id="assistPresales"
-                          checked={selectedOption === "assistPresales"}
-                          onChange={() => handleOptionSelect("assistPresales")}
-                          className="form-check-input"
-                        />
-                        <label htmlFor="assistPresales" className="form-check-label">
-                          Would you like our Presales team to reach out over a call and assist you with more details?
-                        </label>
-                      </div>
+                        To protect your privacy and peace of mind, the <strong> VTP Direct Program </strong> offers a no-follow-up experience. Customers enrolled in the program will receive an <strong> additional discount over and above all ongoing offers </strong> at VTP Realty. You will get exclusive coupon code after form submission. Share it only at the project site office reception. <strong>
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#termsModal"
+                            className="text-decoration-underline  bold-text"
+                          >
+                            <strong>Program Guidelines</strong>
+                          </a>
+                        </strong>
+                      </label>
                     </div>
 
-                    <button type="button" className="vtp-btn nextbtn" onClick={handleBack} disabled={!selectedOption}>
-                      <span className="vtp-btn-text custm-btn">
-                        Next <ArrowRight size={16} />
-                      </span>
-                    </button>
-                    
+                    <h5 className="my-2 text-center">OR</h5>
+
+                    <div className="form-check d-flex align-items-center gap-2 mb-2">
+                      <input
+                        type="checkbox"
+                        id="assistPresales"
+                        checked={selectedOption === "assistPresales"}
+                        onChange={() => handleOptionSelect("assistPresales")}
+                        className="form-check-input"
+                      />
+                      <label htmlFor="assistPresales" className="form-check-label">
+                        Would you like our Presales team to reach out over a call and assist you with more details?
+                      </label>
+                    </div>
                   </div>
+
+                  <button type="button" className="page-btn primary nextbtn" onClick={handleBack} disabled={!selectedOption}>
+                    <span className="vtp-btn-text custm-btn">
+                      Next <ArrowRight size={16} />
+                    </span>
+                  </button>
+
+                </div>
                 :
-                  (
-                    <>
-                      {/* Back Button */}
-                      <button
-                        type="button"
-                        className="btn btn-outline-gold mb-3 back-btn"
-                        onClick={handleBack}
-                      >
-                        ←
-                      </button>
-                      
-                      <Form id="contact_form">
-                        <div className="row">
-                          <div className="col-md-6 col-12 mb-3">
-                            <Field type="hidden" id="gclid" name="gclid" />
-                            <Field type="hidden" id="sfcid" name="sfcid" />
-                            <Field type="hidden" id="sfid" name="sfid" />
-                            <Field type="hidden" id="utm_source" name="utm_source" />
-                            <Field type="hidden" id="utm_medium" name="utm_medium" />
-                            <Field type="hidden" id="utm_campaign" name="utm_campaign" />
-                            <Field type="hidden" id="utm_device" name="utm_device" />
-                            <Field type="hidden" id="utm_term" name="utm_term" />
-                            <Field type="hidden" id="gad_source" name="gad_source" />
-                            <Field type="hidden" id="fbclid" name="fbclid" />
-                            <Field type="hidden" id="sk_referrer" name="sk_referrer" />
-                            <Field type="hidden" name="project_name" />
-                            <Field type="hidden" name="subproject_name" />
+                (
+                  <>
+                    {/* Back Button */}
+                    <button
+                      type="button"
+                      className="page-btn btn-outline-gold mb-3 back-btn"
+                      onClick={handleBack}
+                    >
+                      ←
+                    </button>
 
-                            <Field
-                              type="hidden"
-                              id="download_brochure"
-                              name="download_brochure"
-                            />
+                    <Form id="contact_form">
+                      <div className="row">
+                        <div className="col-md-6 col-12 mb-3">
+                          <Field type="hidden" id="gclid" name="gclid" />
+                          <Field type="hidden" id="sfcid" name="sfcid" />
+                          <Field type="hidden" id="sfid" name="sfid" />
+                          <Field type="hidden" id="utm_source" name="utm_source" />
+                          <Field type="hidden" id="utm_medium" name="utm_medium" />
+                          <Field type="hidden" id="utm_campaign" name="utm_campaign" />
+                          <Field type="hidden" id="utm_device" name="utm_device" />
+                          <Field type="hidden" id="utm_term" name="utm_term" />
+                          <Field type="hidden" id="gad_source" name="gad_source" />
+                          <Field type="hidden" id="fbclid" name="fbclid" />
+                          <Field type="hidden" id="sk_referrer" name="sk_referrer" />
+                          <Field type="hidden" name="project_name" />
+                          <Field type="hidden" name="subproject_name" />
 
-                            <Field
-                              type="text"
-                              id="first_name"
-                              name="first_name"
-                              className="form-control form-field custom-input"
-                              placeholder="First Name*"
-                            />
-                            <ErrorMessage
-                              name="first_name"
-                              component="span"
-                              className="error"
-                            />
-                          </div>
-                          <div className="col-md-6 col-12 mb-3 ">
-                            <Field
-                              type="text"
-                              id="last_name"
-                              name="last_name"
-                              className="form-control form-field custom-input"
-                              placeholder="Last Name*"
-                            />
-                            <ErrorMessage
-                              name="last_name"
-                              component="span"
-                              className="error"
-                            />
-                          </div>
-                          <div className="col-md-12 col-12 mb-3">
-                            <Field
-                              type="email"
-                              id="email"
-                              name="email"
-                              className="form-control form-field custom-input"
-                              placeholder="Email*"
-                            />
-                            <ErrorMessage name="email" component="span" className="error" />
-                          </div>
-                          <div className="col-md-5 col-4 mb-3 pe-0">
-                            <CountryCodes />
-                          </div>
-                          <div className="col-md-7 col-8 mb-3 pl-0">
-                            <Field
-                              type="text"
-                              id="mobile"
-                              name="mobile"
-                              className="form-control form-field custom-input"
-                              placeholder="Phone*"
-                            />
-                            <ErrorMessage
-                              name="mobile"
-                              component="span"
-                              className="error"
-                            />
-                          </div>
-                          <div className="col-md-12 col-12 mb-3">
-                            <div className="select-wrapper">
-                              <Field
-                                as="select"
-                                id="project_select"
-                                name="project_select"
-                                className="form-control form-select form-field custom-input"
-                                value={values.project_select}
-                                onChange={(e) => {
-                                  const selectedValue = e.target.value;
-                                  const selectedProject = projectData[selectedValue];
+                          <Field
+                            type="hidden"
+                            id="download_brochure"
+                            name="download_brochure"
+                          />
 
-                                  setFieldValue("project_select", selectedValue);
-
-                                  if (selectedProject) {
-                                    setFieldValue("project_name", selectedProject.project_name);
-                                    setFieldValue("subproject_name", selectedProject.project_text);
-                                  }
-                                }}
-
-                              >
-                                <option value="" disabled>
-                                  Select project
-                                </option>
-                                <option value="NEVER BEFORE EAST">
-                                  CHRYSOS EAST - Kharadi, Pune
-                                </option>
-                                <option value="NEVER BEFORE WEST">
-                                  CHRYSOS WEST - Mahalunge, Pune
-                                </option>
-                              </Field>
-                            </div>
-                            <ErrorMessage
+                          <Field
+                            type="text"
+                            id="first_name"
+                            name="first_name"
+                            className="form-control form-field custom-input"
+                            placeholder="First Name*"
+                          />
+                          <ErrorMessage
+                            name="first_name"
+                            component="span"
+                            className="error"
+                          />
+                        </div>
+                        <div className="col-md-6 col-12 mb-3 ">
+                          <Field
+                            type="text"
+                            id="last_name"
+                            name="last_name"
+                            className="form-control form-field custom-input"
+                            placeholder="Last Name*"
+                          />
+                          <ErrorMessage
+                            name="last_name"
+                            component="span"
+                            className="error"
+                          />
+                        </div>
+                        <div className="col-md-12 col-12 mb-3">
+                          <Field
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="form-control form-field custom-input"
+                            placeholder="Email*"
+                          />
+                          <ErrorMessage name="email" component="span" className="error" />
+                        </div>
+                        <div className="col-md-5 col-4 mb-3 pe-0">
+                          <CountryCodes />
+                        </div>
+                        <div className="col-md-7 col-8 mb-3 pl-0">
+                          <Field
+                            type="text"
+                            id="mobile"
+                            name="mobile"
+                            className="form-control form-field custom-input"
+                            placeholder="Phone*"
+                          />
+                          <ErrorMessage
+                            name="mobile"
+                            component="span"
+                            className="error"
+                          />
+                        </div>
+                        <div className="col-md-12 col-12 mb-3">
+                          <div className="select-wrapper">
+                            <Field
+                              as="select"
+                              id="project_select"
                               name="project_select"
-                              component="span"
-                              className="error"
-                            />
-                          </div>
+                              className="form-control form-select form-field custom-input"
+                              value={values.project_select}
+                              onChange={(e) => {
+                                const selectedValue = e.target.value;
+                                const selectedProject = projectData[selectedValue];
 
-                          {/* <div className="col-md-12 col-12 mb-2">
+                                setFieldValue("project_select", selectedValue);
+
+                                if (selectedProject) {
+                                  setFieldValue("project_name", selectedProject.project_name);
+                                  setFieldValue("subproject_name", selectedProject.project_text);
+                                }
+                              }}
+
+                            >
+                              <option value="" disabled>
+                                Select project
+                              </option>
+                              <option value="NEVER BEFORE EAST">
+                                CHRYSOS EAST - Kharadi, Pune
+                              </option>
+                              <option value="NEVER BEFORE WEST">
+                                CHRYSOS WEST - Mahalunge, Pune
+                              </option>
+                            </Field>
+                          </div>
+                          <ErrorMessage
+                            name="project_select"
+                            component="span"
+                            className="error"
+                          />
+                        </div>
+
+                        {/* <div className="col-md-12 col-12 mb-2">
                             <div className="form-gold-border">
                               <div className="form-check d-flex align-items-center gap-2">
                                 <Field
@@ -580,107 +580,96 @@ const ContactForm = ({ onClick, closePopup }) => {
                             </div>
                           </div> */}
 
-                          <div className="col-md-12 col-12">
-                            <Widget
-                              onSuccess={handleCaptchaSuccess}
-                              onError={handleCaptchaError}
-                            />
-                          </div>
+                        <div className="col-md-12 col-12">
+                          <Widget
+                            onSuccess={handleCaptchaSuccess}
+                            onError={handleCaptchaError}
+                          />
+                        </div>
 
-                          <div className="col-md-12 col-12 mb-1">
-                            <div className="form-check checkbox-wrapper">
-                              <div className="d-flex align-items-center gap-2">
-                                <Field
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  name="term_condition"
-                                  id="flexCheckDefault"
-                                  checked={values.term_condition}
-                                  onChange={() =>
-                                    setFieldValue("term_condition", !values.term_condition)
-                                  }
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="flexCheckDefault"
-                                >
-                                  You authorize, as per our
-                                  <Link
-                                    to="https://www.vtprealty.in/privacy-policy"
-                                    target="_blank"
-                                    className="text-decoration-underline"
-                                  >
-                                    {" "}
-                                    <strong> Privacy Policy </strong>{" "}
-                                  </Link>
-                                  , Calls, communication via SMS, calls, RCS, and WhatsApp.
-                                </label>
-                              </div>
-                              <ErrorMessage
+                        <div className="col-md-12 col-12 mb-1">
+                          <div className="form-check checkbox-wrapper">
+                            <div className="d-flex align-items-center gap-2">
+                              <Field
+                                className="form-check-input"
+                                type="checkbox"
                                 name="term_condition"
-                                component="span"
-                                className="error"
+                                id="flexCheckDefault"
+                                checked={values.term_condition}
+                                onChange={() =>
+                                  setFieldValue("term_condition", !values.term_condition)
+                                }
                               />
-                              {/* <ErrorMessage
+                              <label
+                                className="form-check-label"
+                                htmlFor="flexCheckDefault"
+                              >
+                                You authorize, as per our
+                                <Link
+                                  to="https://www.vtprealty.in/privacy-policy"
+                                  target="_blank"
+                                  className="text-decoration-underline"
+                                >
+                                  {" "}
+                                  <strong> Privacy Policy </strong>{" "}
+                                </Link>
+                                , Calls, communication via SMS, calls, RCS, and WhatsApp.
+                              </label>
+                            </div>
+                            <ErrorMessage
+                              name="term_condition"
+                              component="span"
+                              className="error"
+                            />
+                            {/* <ErrorMessage
                                 name="term_condition_consent"
                                 component="span"
                                 className="error"
                               />*/}
-                            </div>
-                          </div>
-
-                          <div className="col-md-12 col-12 mb-3">
-                            <div className="form-check d-flex align-items-center gap-2">
-                              <Field
-                                type="checkbox"
-                                name="ads"
-                                aria-label="I consent to VTP Realty using my data for personalized recommendations and ads."
-                                className="form-check-input"
-                              />
-                              <label className="form-check-label">
-                                I consent to VTP Realty using my data for personalized
-                                recommendations and ads.
-                              </label>
-                              <ErrorMessage name="ads" component="span" className="error" />
-                            </div>
-                          </div>
-                          <div className="d-flex justify-content-center p-0 inner-custm">
-                            <button
-                              type="submit"
-                              className="downloadBtn vtp-btn "
-                              disabled={isSubmitting}
-                              style={{
-                                opacity: isSubmitting ? 0.6 : 1,
-                                cursor: isSubmitting ? "not-allowed" : "pointer",
-                              }}
-                            >
-                              {isSubmitting ? (
-                                <span>Submitting...</span>
-                              ) : (
-                                <>
-                                  <span>
-                                    <div className="page_btn center-flex">
-                                      {/* <img src={top} alt="Top" /> */}
-                                      <span className="vtp-btn-text custm-btn">
-                                        Reserve Your Preview 
-                                        {/* <Submit />{" "} */}
-                                      </span>
-                                      {/* <img src={bottom} alt="Top" /> */}
-                                    </div>
-                                  </span>
-                                </>
-                              )}
-                            </button>
                           </div>
                         </div>
-                      </Form>
-                    </>
-                  )
-                }
-              </>
-            );
-          }}
-        </Formik>
+
+                        <div className="col-md-12 col-12 mb-3">
+                          <div className="form-check d-flex align-items-center gap-2">
+                            <Field
+                              type="checkbox"
+                              name="ads"
+                              aria-label="I consent to VTP Realty using my data for personalized recommendations and ads."
+                              className="form-check-input"
+                            />
+                            <label className="form-check-label">
+                              I consent to VTP Realty using my data for personalized
+                              recommendations and ads.
+                            </label>
+                            <ErrorMessage name="ads" component="span" className="error" />
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-center p-0 inner-custm">
+                          <button
+                            type="submit"
+                            className="page-btn primary submit_btn"
+                            disabled={isSubmitting}
+                            style={{
+                              opacity: isSubmitting ? 0.6 : 1,
+                              cursor: isSubmitting ? "not-allowed" : "pointer",
+                            }}
+                          >
+                            {isSubmitting ? (
+                              <span>Submitting...</span>
+                            ) : (
+                              <span>Reserve Your Preview</span>
+                            )}
+                          </button>
+                        </div>
+                      </div>
+                    </Form>
+                  </>
+                )
+              }
+            </>
+          );
+        }}
+      </Formik>
     </div>
   );
 };

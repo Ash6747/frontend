@@ -87,8 +87,8 @@ const Home = () => {
   return (
     <>
       <section id="home">
-        <Banner />
         <Header />
+        <Banner />
 
         <LazySection minHeight="600px">
           <Overview />

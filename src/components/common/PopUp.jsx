@@ -46,17 +46,17 @@ const PopupModal = ({ data }) => {
           <div className="modal-body">
             <button
               type="button"
-              className="btn-close"
+              className="page-btn-close"
               onClick={handleCloseModal}
               aria-label="Close exclusive offer pop-up modal"
             ></button>
             {/* <a href={data[0]?.url} rel="noreferrer" target="black"> */}
-              <img
-                className="popup-img"
-                src={`${data[0]?.OfferImage.data.attributes.url}`}
-                alt="Chrysos VTP Luxe Exclusive Offer Announcement"
-                loading="lazy"
-              />
+            <img
+              className="popup-img"
+              src={`${data[0]?.OfferImage.data.attributes.url}`}
+              alt="Chrysos VTP Luxe Exclusive Offer Announcement"
+              loading="lazy"
+            />
             {/* </a> */}
           </div>
         </div>

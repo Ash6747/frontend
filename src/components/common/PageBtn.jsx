@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
-const PageBtn = ({ type="", text, isPdf, isSubmit, className='' }) => {
+const PageBtn = ({ type = "", text, isPdf, isSubmit, className = '' }) => {
   const btnRef = useRef(null);
 
   return (
     <button
       ref={btnRef}
-      className={`page_btn ${type} ${className}`}
+      className={`page-btn primary ${type} ${className}`}
       data-aos="fade-up"
       data-aos-delay="200"
       data-bs-toggle="modal"

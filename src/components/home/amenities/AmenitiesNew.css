@@ -21,12 +21,19 @@ section#Gallery .row {
     flex-direction: column;
     border: none;
     width: 45%;
-    gap: 25px;
+    gap: 16px;
     justify-content: center;
 }
 
 #little_thing_tab li.nav-item {
-    flex: 1;
+    flex: none;
+}
+
+#little_thing_tab .page-btn {
+    min-width: 150px;
+    padding: 12px 24px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
 }
 
 .nav-tabs .nav-link {

@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ThemeProvider } from './context/ThemeContext';
 
 const queryClient = new QueryClient();
 
@@ -21,9 +22,9 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <Suspense fallback={<p>Loading...</p>}> */}
+      <ThemeProvider>
         <RouterProvider router={router()} />
-      {/* </Suspense> */}
+      </ThemeProvider>
     </QueryClientProvider>
   )
 }

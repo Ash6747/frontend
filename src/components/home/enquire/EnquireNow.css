@@ -43,7 +43,7 @@
 }
 
 #form_wrapper form {
-  font-family: Great-Book, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .enquiry-section {
@@ -59,7 +59,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 34px !important;
-  font-family: Great-Book, sans-serif;
+  font-family: Beliau, sans-serif;
   font-weight: 700 !important;
 }
 
@@ -67,7 +67,7 @@
 
 input,
 select {
-  font-family: Great-Book;
+  font-family: Montserrat, sans-serif;
 }
 
 .enquiry-section .downloadBtn {
@@ -131,7 +131,7 @@ select {
 .submit-button {
   position: relative;
   font-size: 20px;
-  font-family: Great-Book;
+  font-family: Montserrat, sans-serif;
   padding: 0px 2px;
   background: transparent;
   border: none;
@@ -229,7 +229,7 @@ input.form-check-input {
 
 .form-check-label strong {
   font-weight: bolder;
-  font-family: Great-Book;
+  font-family: Montserrat, sans-serif;
 }
 
 .enq-frame {

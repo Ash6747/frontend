@@ -37,7 +37,7 @@ const banners = [
     category: "central_park",
   },
 
-  
+
   {
     src: "/images/townshipGallery/Exterior.webp",
     alt: "Sports",
@@ -63,7 +63,7 @@ const banners = [
     alt: "Sports",
     category: "sports",
   },
-  
+
   {
     src: "/images/townshipGallery/RP-8.webp",
     alt: "Central Park",
@@ -248,11 +248,11 @@ const TownshipGallery = () => {
       <div className="title-wrapper center mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
         <h2 className="title-mini page-title sec_title f-thin center">VTP township codename Pegasus
           <br />
-        <span className="page-text-color">
-          Township gallery
-        </span>
+          <span className="page-text-color">
+            Township gallery
+          </span>
         </h2>
-        
+
       </div>
 
       <div className="title-wrapper mx-auto">
@@ -270,7 +270,7 @@ const TownshipGallery = () => {
               role="presentation"
             >
               <button
-                className={`nav-link ${activeTab === item.value ? "active" : ""}`}
+                className={`btn ${activeTab === item.value ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                 id={`${item.value}-tab`}
                 data-bs-toggle="tab"
                 data-bs-target={`#${item.value}`}
@@ -280,7 +280,6 @@ const TownshipGallery = () => {
                 aria-selected={activeTab === item.value}
                 onClick={() => setActiveTab(item.value)}
               >
-                {/* <span>{item.title}</span> */}
                 {item.title}
               </button>
             </li>

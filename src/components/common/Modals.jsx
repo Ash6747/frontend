@@ -25,7 +25,7 @@ const Modals = ({ data }) => {
     const handleMouseLeave = (e) => {
       const modalElement = document.getElementById("enquirynowmodal");
 
-      // ✅ check if modal exists AND already open
+      // check if modal exists AND already open
       const isModalOpen = modalElement?.classList.contains("show");
 
       if (e.clientY <= 0 && !hasShown.current && !isModalOpen) {
@@ -44,7 +44,7 @@ const Modals = ({ data }) => {
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
-  
+
   return (
     <section className="modals-wrapper">
       <div className="float-button-desktop">
@@ -67,7 +67,7 @@ const Modals = ({ data }) => {
               <h5 className="modal-title fs-5">Disclaimer</h5>
               <button
                 type="button"
-                className="btn-close"
+                className="page-btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close disclaimer modal"
               ></button>
@@ -90,7 +90,7 @@ const Modals = ({ data }) => {
               <h5 className="modal-title fs-5">Terms and Conditions</h5>
               {/* <button
                 type="button"
-                className="btn-close"
+                className="page-btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button> */}
@@ -184,7 +184,7 @@ const Modals = ({ data }) => {
             />
             <button
               type="button"
-              className="btn-close modal-close-btn"
+              className="page-btn-close modal-close-btn"
               data-bs-dismiss="modal"
               aria-label="Close enquiry modal"
               ref={thankYou}
@@ -210,7 +210,7 @@ const Modals = ({ data }) => {
           </li>
           <li className="mob-foot-li">
             <button
-              className="bottom-btn bottom-btn-lg"
+              className="page-btn primary bottom-btn bottom-btn-lg"
               data-bs-toggle="modal"
               data-bs-target="#enquirynowmodal"
               aria-label="Open Get Quote form modal"

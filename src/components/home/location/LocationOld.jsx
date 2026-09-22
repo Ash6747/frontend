@@ -60,7 +60,7 @@ const LocationOld = () => {
 
                             <button
                                 type="button"
-                                className={activeTab === "east" ? "active" : ""}
+                                className={`btn ${activeTab === "east" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                                 onClick={() => handleTabChange("east")}
                             >
                                 Never before east
@@ -68,7 +68,7 @@ const LocationOld = () => {
 
                             <button
                                 type="button"
-                                className={activeTab === "west" ? "active" : ""}
+                                className={`btn ${activeTab === "west" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                                 onClick={() => handleTabChange("west")}
                             >
                                 Never before West
