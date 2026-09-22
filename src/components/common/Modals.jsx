@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import { Modal } from "bootstrap";
-import { LuPhone as Phone, LuHeadphones as Headphones } from "react-icons/lu";
+import { LuPhone as Phone, LuHeadphones as Headphones, LuX } from "react-icons/lu";
 import ContactForm from "./ContactForm";
+import Image from "./Image";
 
 const WhatsAppIcon = ({ size = 24, className = "" }) => (
   <svg
@@ -47,17 +48,6 @@ const Modals = ({ data }) => {
 
   return (
     <section className="modals-wrapper">
-      <div className="float-button-desktop">
-        <a
-          className="whatsapp-icon"
-          target="_blank"
-          href={data?.whatsappURL}
-          rel="noopener noreferrer"
-          aria-label="Chat with us on WhatsApp"
-        >
-          <WhatsAppIcon size={40} />
-        </a>
-      </div>
 
       {/* Disclaimer Modal */}
       <div className="modal fade" id="disclaimerModal" tabIndex="-1">
@@ -70,7 +60,9 @@ const Modals = ({ data }) => {
                 className="page-btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close disclaimer modal"
-              ></button>
+              >
+                <LuX size={18} />
+              </button>
             </div>
             <div
               className="modal-body"
@@ -98,10 +90,10 @@ const Modals = ({ data }) => {
                 href="#"
                 data-bs-toggle="modal"
                 data-bs-target="#enquirynowmodal"
-                className="text-decoration-underline  bold-text"
+                className="page-btn-close"
                 aria-label="Close Terms and Conditions modal"
               >
-                <strong className="clsedPopUp">x</strong>
+                <LuX size={18} />
               </a>
             </div>
             <div
@@ -176,19 +168,19 @@ const Modals = ({ data }) => {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <img
-              className="project-contact-ban"
-              src="/videos/banner/ban-1.webp"
-              alt="Chrysos VTP Luxe Banner Animation"
-              loading="lazy"
-            />
-            <button
-              type="button"
-              className="page-btn-close modal-close-btn"
-              data-bs-dismiss="modal"
-              aria-label="Close enquiry modal"
-              ref={thankYou}
-            ></button>
+            <div className="modal-header">
+              <Image src={'/logo.png'} />
+
+              <button
+                type="button"
+                className="page-btn-close modal-close-btn"
+                data-bs-dismiss="modal"
+                aria-label="Close enquiry modal"
+                ref={thankYou}
+              >
+                <LuX size={18} />
+              </button>
+            </div>
             <div className="modal-body">
               <ContactForm closePopup={thankYou} />
             </div>

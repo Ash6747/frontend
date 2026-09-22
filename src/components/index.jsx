@@ -8,7 +8,7 @@
 // import AmenitiesNew from './home/amenities/AmenitiesNew';
 // import Walkthrough from './home/walkthrough/Walkthrough';
 // import Location from './home/location/Location';
-// import AboutVTP from './home/about/AboutVTP';
+// import about from './home/about/about';
 // import Philosophy from './home/philosophy/Philosophy';
 // import Promise from './home/promise/Promise';
 // import EnquireNow from './home/enquire/EnquireNow';
@@ -30,7 +30,7 @@
 //     AmenitiesNew,
 //     Walkthrough,
 //     Location,
-//     AboutVTP,
+//     about,
 //     Shot,
 //     Event,
 //     Philosophy,

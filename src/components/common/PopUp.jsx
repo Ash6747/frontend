@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Modal } from "bootstrap";
+import { LuX } from "react-icons/lu";
 
 const PopupModal = ({ data }) => {
   useEffect(() => {
@@ -49,7 +50,9 @@ const PopupModal = ({ data }) => {
               className="page-btn-close"
               onClick={handleCloseModal}
               aria-label="Close exclusive offer pop-up modal"
-            ></button>
+            >
+              <LuX size={18} />
+            </button>
             {/* <a href={data[0]?.url} rel="noreferrer" target="black"> */}
             <img
               className="popup-img"

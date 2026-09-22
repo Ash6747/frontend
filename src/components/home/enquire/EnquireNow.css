@@ -1,43 +1,16 @@
-#form_wrapper .form_content .sec_title,
-#form_wrapper .form_content .sec_desc {
-  color: #fff;
-}
-
 #form_wrapper .form_details {
   position: relative;
   overflow: hidden;
   background: #fff;
   padding: 30px;
-  /* border-radius: 15px; */
-  isolation: isolate;
+  border-radius: 15px;
+  border: 1px solid #CFD4DB;
+  background-color: #41075c;
 }
 
-#form_wrapper .form_details::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 2.13px;
-  border-radius: inherit;
-
-  background: linear-gradient(89.99deg,
-      #FFDE59 -11.78%,
-      #D57C45 100.08%);
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  pointer-events: none;
-  z-index: -1;
-}
 
 #form_wrapper h3 {
-  background: #502e09;
   color: #fff;
-  padding: 22px 0;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -48,8 +21,8 @@
 
 .enquiry-section {
   position: relative;
-  background-size: contain;
-  background: url(/images/general/enq-bg.webp) no-repeat bottom;
+  background-color: #FFFCF8;
+
   background-size: cover;
 }
 
@@ -58,12 +31,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 34px !important;
+  font-size: 34px;
   font-family: Beliau, sans-serif;
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 .enquiry-section .title-wrapper {}
+
+
 
 input,
 select {
@@ -72,7 +47,7 @@ select {
 
 .enquiry-section .downloadBtn {
   background-color: #00000000;
-  border: none !important;
+  border: none;
   width: 100%;
 }
 
@@ -100,7 +75,8 @@ select {
 } */
 
 .enquirynow_form .sec_title {
-  color: var(--prime-color);
+  color: #fff;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -350,7 +326,7 @@ input.form-check-input {
 }
 
 #directProgram a {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 .nextbtn {
@@ -400,16 +376,11 @@ input.form-check-input {
   }
 
   #form_wrapper h3 {
-    background: var(--prime-color);
-    padding: 15px 0;
     font-size: 22px;
   }
 }
 
 @media (max-width: 992px) {
-  #form_wrapper h3 {
-    padding: 12px 0;
-  }
 
   #form_wrapper form {
     padding: 15px;
@@ -655,7 +626,7 @@ input.form-check-input {
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: var(--text-secondary);
+  color: #fff;
   opacity: 0.85;
   line-height: 1.5;
   margin-top: 10px;

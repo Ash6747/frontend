@@ -62,7 +62,7 @@ section.brand-snapshots-wrapper .sec_title_container svg path {
 
 .snapshot-value span {
   font-size: 34px;
-  font-weight: 700 !important;
+  font-weight: 700;
   text-transform: uppercase;
   /* margin-top: 10px; */
   color: #703b18;
@@ -83,7 +83,7 @@ section.brand-snapshots-wrapper .sec_title_container svg path {
 
 .snapshot-label {
   line-height: 1.2;
-  font-weight: 400 !important;
+  font-weight: 400;
   text-transform: capitalize;
   font-size: 12px;
   color: #2a2a2acc;
@@ -94,8 +94,10 @@ section.brand-snapshots-wrapper .sec_title_container svg path {
 
 @media(min-width: 1799px) {
   .snap-shots-container {
-     justify-content: space-around;  }
+    justify-content: space-around;
+  }
 }
+
 @media(max-width: 1299px) {
   .snapshot-item {
     width: 175px;

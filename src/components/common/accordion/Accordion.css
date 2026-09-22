@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Custom Accordion Component Styles
+   ========================================================================== */
+
+.custom-accordion-wrapper {
+  width: 100%;
+}
+
+/* Badge & Section Heading */
+.custom-accordion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.custom-accordion-badge-icon {
+  color: var(--primary-color, #BF8250);
+  flex-shrink: 0;
+}
+
+.custom-accordion-badge .sub_title {
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-dark, #2b2538);
+  margin: 0;
+}
+
+.custom-accordion-heading {
+  font-family: var(--font-beliau, "Beliau", serif);
+  color: var(--primary-color, #BF8250);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+/* Accordion Container */
+.custom-accordion-container {
+  border-top: 1px solid #ECE7E1;
+  border-radius: 8px;
+  background: transparent;
+  width: 100%;
+}
+
+/* Accordion Item: Closed state is WHITE background */
+.custom-accordion-item {
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #ECE7E1;
+  transition: background 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.custom-accordion-item.closed,
+.custom-accordion-item:not(.active) {
+  background: #ffffff;
+}
+
+/* Accordion Item: Open state is GRADIENT background */
+.custom-accordion-item.open,
+.custom-accordion-item.active,
+.custom-accordion-item:has(.custom-accordion-btn:not(.collapsed)) {
+  background: linear-gradient(135deg, rgba(229, 172, 116, 0.16) 0%, rgba(186, 115, 63, 0.05) 100%);
+  border-bottom-color: rgba(191, 130, 80, 0.35);
+}
+
+/* Accordion Button / Header trigger */
+.custom-accordion-btn {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Remove default Bootstrap chevron */
+.custom-accordion-btn::after {
+  display: none !important;
+}
+
+/* Numbering */
+.custom-accordion-num {
+  font-size: 15px;
+  font-weight: 400;
+  color: #A0A5B1;
+  min-width: 26px;
+  flex-shrink: 0;
+  font-family: Montserrat, sans-serif;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.custom-accordion-item.open .custom-accordion-num,
+.custom-accordion-item.active .custom-accordion-num,
+.custom-accordion-btn:not(.collapsed) .custom-accordion-num {
+  color: var(--primary-color, #BF8250);
+}
+
+/* Title on close and open */
+.custom-accordion-title {
+  font-size: 15.5px;
+  color: #2F2A38;
+  font-family: Montserrat, sans-serif;
+  flex: 1;
+  margin: 0;
+  padding-right: 8px;
+  line-height: 1.45;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Title color on open */
+.custom-accordion-item.open .custom-accordion-title,
+.custom-accordion-item.active .custom-accordion-title,
+.custom-accordion-btn:not(.collapsed) .custom-accordion-title {
+  color: var(--primary-color, #BF8250);
+}
+
+/* React Icon & Smooth Rotation Animation */
+.custom-accordion-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.custom-accordion-icon {
+  font-size: 20px;
+  color: #9CA3AF;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  display: block;
+}
+
+.custom-accordion-item.open .custom-accordion-icon,
+.custom-accordion-item.active .custom-accordion-icon,
+.custom-accordion-btn:not(.collapsed) .custom-accordion-icon {
+  transform: rotate(45deg);
+  color: var(--primary-color, #BF8250);
+}
+
+/* Accordion Description / Body:
+   Hide description through CSS when closed, and show on open */
+.custom-accordion-collapse:not(.show) .custom-accordion-body,
+.custom-accordion-item.closed .custom-accordion-body,
+.custom-accordion-item:not(.active):not(:has(.show)) .custom-accordion-body {
+  display: none !important;
+  opacity: 0;
+  max-height: 0;
+}
+
+.custom-accordion-collapse.show .custom-accordion-body,
+.custom-accordion-item.open .custom-accordion-body,
+.custom-accordion-item.active .custom-accordion-body,
+.custom-accordion-item:has(.custom-accordion-btn:not(.collapsed)) .custom-accordion-body {
+  display: block !important;
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.3s ease;
+}
+
+.custom-accordion-body {
+  padding: 0 20px 22px calc(26px + 16px + 16px);
+  color: #5E5866;
+  font-size: 13.5px;
+  line-height: 1.68;
+  font-family: Montserrat, sans-serif;
+}
+
+.custom-accordion-body p {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .custom-accordion-heading {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .custom-accordion-btn {
+    padding: 15px 12px;
+    gap: 12px;
+  }
+
+  .custom-accordion-title {
+    font-size: 14.5px;
+  }
+
+  .custom-accordion-body {
+    padding: 0 12px 16px calc(26px + 12px + 12px);
+    font-size: 13px;
+  }
+}

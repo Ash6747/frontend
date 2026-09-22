@@ -111,7 +111,7 @@ const AmenitiesNew = () => {
             >
               <li className="nav-item" role="presentation">
                 <button
-                  className={`btn ${activeTab === "exterior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
+                  className={`page-btn ${activeTab === "exterior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("exterior");
                     setCurrentIndex(1);
@@ -124,7 +124,7 @@ const AmenitiesNew = () => {
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className={`btn ${activeTab === "interior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
+                  className={`page-btn ${activeTab === "interior" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("interior");
                     setCurrentIndex(1);
@@ -137,7 +137,7 @@ const AmenitiesNew = () => {
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className={`btn ${activeTab === "gallery" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
+                  className={`page-btn ${activeTab === "gallery" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                   onClick={() => {
                     setActiveTab("gallery");
                     setCurrentIndex(1);

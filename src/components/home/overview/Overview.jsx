@@ -19,11 +19,11 @@ const Overview = () => {
       id="about-cygnus"
       className="about-cygnus-container"
     >
-      <section className="row about_chrysos_ove side-space pe-lg-0 section-space pb-0 justify-content-between">
+      <section className="row side-space pe-lg-0 section-space pb-0 justify-content-between">
         {/* Left Image Section */}
         <div className="col-lg-4 text-section">
           <div className="inner-content side-space p-lg-0">
-            <h3 className="sub_title sub_title-overview" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">The Isle of Wonder</h3>
+            <h3 className="sub_title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">The Isle of Wonder</h3>
             <h3 className="codename sec_title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
               Pune's first <br /> villas in the sky
             </h3>

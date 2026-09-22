@@ -9,37 +9,37 @@ const fetchSharedJson = {
             "aboutCounter": [
                 {
                     "id": 7,
-                    "number": "22000",
+                    "number": "28",
                     "postfix": "+",
-                    "title": "HAPPY CUSTOMERS & ADDING MORE EVERY MONTH",
+                    "title": "Years of Legacy",
                     "isDecimal": false
                 },
                 {
                     "id": 8,
-                    "number": "40",
+                    "number": "30",
                     "postfix": "+",
-                    "title": "YEARS OF VTP GROUP LEGACY",
+                    "title": "Landmark Projects",
                     "isDecimal": false
                 },
                 {
                     "id": 9,
-                    "number": "31",
-                    "postfix": "+",
-                    "title": "PROJECTS DELIVERED",
+                    "number": "20",
+                    "postfix": "M+",
+                    "title": "Sq. Ft. Developed Area",
                     "isDecimal": false
                 },
                 {
                     "id": 10,
-                    "number": "1.60",
-                    "postfix": "Cr+",
-                    "title": "SQ.FT. DELIVERED",
+                    "number": "40",
+                    "postfix": "K+",
+                    "title": "Happy Residents",
                     "isDecimal": true
                 },
                 {
                     "id": 11,
-                    "number": "3",
-                    "postfix": "Cr+",
-                    "title": "SQ.FT. OF SIMULTANEOUS CONSTRUCTION",
+                    "number": "10",
+                    "postfix": "K+",
+                    "title": "Total Units Sold",
                     "isDecimal": false
                 }
             ],

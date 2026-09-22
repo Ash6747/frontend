@@ -276,7 +276,7 @@ const Amenities = () => {
 
               <button
                 type="button"
-                className={`btn ${activeTab === "west" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
+                className={`${activeTab === "west" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                 onClick={() => handleTabChange("west")}
               >
                 Never before West
@@ -284,7 +284,7 @@ const Amenities = () => {
 
               <button
                 type="button"
-                className={`btn ${activeTab === "east" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
+                className={`${activeTab === "east" ? "page-btn-tab-primary tab-primary active" : "page-btn-tab-secondary tab-secondary"}`}
                 onClick={() => handleTabChange("east")}
               >
                 Never before east

@@ -369,8 +369,7 @@ const ContactForm = ({ closePopup }) => {
                   >
                     <div className="enquire-btn-content">
                       <div className="enquire-btn-title">
-                        <span>ENQUIRE</span>
-                        <span>NOW</span>
+                        ENQUIRE NOW
                       </div>
                       <ArrowRight className="enquire-btn-arrow" size={24} />
                     </div>

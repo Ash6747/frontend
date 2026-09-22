@@ -196,6 +196,10 @@ li.nav-item.active a {
     padding-left: 0px;
 }
 
+.header-btn-container .page-btn {
+    border: none;
+}
+
 li.nav-item {
     display: flex;
     align-items: center;

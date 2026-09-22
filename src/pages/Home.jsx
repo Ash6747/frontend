@@ -13,7 +13,7 @@ const Highlights = lazy(() => import("../components/home/highlights/Highlights")
 const UnitPlans = lazy(() => import("../components/home/unit-plans/UnitPlans"));
 const AmenitiesNew = lazy(() => import("../components/home/amenities/AmenitiesNew"));
 // const Location = lazy(() => import("../components/home/location/Location"));
-const AboutVTP = lazy(() => import("../components/home/about/AboutVTP"));
+const About = lazy(() => import("../components/home/about/About"));
 const Philosophy = lazy(() => import("../components/home/philosophy/Philosophy"));
 const EnquireNow = lazy(() => import("../components/home/enquire/EnquireNow"));
 const Modals = lazy(() => import("../components/common/Modals"));
@@ -115,11 +115,7 @@ const Home = () => {
         </LazySection> */}
 
         <LazySection minHeight="500px">
-          <AboutVTP data={about_data} />
-        </LazySection>
-
-        <LazySection minHeight="500px">
-          <Philosophy data={philosophy_data} />
+          <About data={about_data} />
         </LazySection>
 
         <LazySection minHeight="400px">

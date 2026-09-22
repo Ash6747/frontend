@@ -1,359 +1,376 @@
-.footer-bottom {
-    background: #1E150D;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 0;
+/* ==========================================================================
+   Redesigned Footer matching mockup image
+   ========================================================================== */
+.footer-wrapper {
+    width: 100%;
     position: relative;
     z-index: 2;
-    /* margin-top: 25px; */
+    overflow: hidden;
 }
 
-.footer-bottom:after {
-    content: '';
-    background: url('/images/footer/footer-bg-new.png');
-    position: absolute;
+/* 1. Top Gold Disclaimer Strip */
+.footer-disclaimer-strip {
+    background-color: #c4a25a;
+    /* background-color: var(--primary-color); */
+    padding: 8px 0;
+    padding-left: 15px;
+    color: #1E150D;
+    font-family: Montserrat, sans-serif;
+    font-size: 12.5px;
     width: 100%;
-    height: 100%;
-    bottom: 0;
-    background-position: top;
-    background-size: 100%;
-    left: 0;
-    z-index: -1;
+    overflow: hidden;
 }
 
-.footer-bottom img {
-    background: #fff;
-    display: block;
-    margin: 0 auto;
-    /* border-radius: 5px; */
-    margin-bottom: 15px;
-    margin-right: 0px !important;
-    height: 111px;
-    width: 111px;
-}
-
-.qr-wrapper {
-    justify-content: center;
-}
-
-.qr-wrapper p {
-    margin: 0;
-    /* text-align: center; */
-}
-
-.footer-bottom .qr_info {
-    margin: 15px 0;
-    /* text-align: center; */
-}
-
-.footer-bottom hr {
-    margin-bottom: 16px;
-}
-
-.footer-bottom-text-wrapper {
-    position: relative;
-    width: 100%;
+.disclaimer-strip-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px !important;
-}
-
-.footer-bottom-text-wrapper p {
-    margin: 0px !important;
-}
-
-span.text-end {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.footer-bottom .qr_info,
-.footer-bottom .qr_info a {
-    font-weight: 400 !important;
-    font-family: Montserrat, sans-serif;
-}
-
-.footer-bottom-text {
-    font-size: 14px;
-}
-
-.footer-bottom-text .border-next {
-    font-weight: 400;
-}
-
-.footer-bottom-text.border-next a {
-    font-weight: 500;
-}
-
-.border-next {
-    position: relative;
-    margin-right: 10px;
-}
-
-.footer-bottom a {
-    font-family: Montserrat, sans-serif;
-    color: #fff;
-    line-height: 23px;
-    font-weight: 400;
-}
-
-.footer-bottom .social-ico path {
-    fill: #fff;
-}
-
-.footer-bottom .social-ico svg:hover path {
-    fill: rgb(0, 0, 0);
-}
-
-@media (max-width: 552px) {
-    .footer-bottom .social-ico svg {
-        height: 20px;
-        width: 20px;
-    }
-}
-
-a.email-info {
-    text-align: center;
-    display: flex;
-    gap: 5px;
-}
-
-.footer_contact_ul {
-    flex-direction: column;
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     width: 100%;
-    padding: 0;
-    height: 100%;
-    margin: 0;
     gap: 10px;
 }
 
-.footer-bottom span {
-    font-family: Montserrat, sans-serif !important;
-}
-
-.footer-bottom .qr_info {
-    margin-top: 20px !important;
-}
-
-.fc_li {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    column-gap: 10px;
-    row-gap: 5px;
-}
-
-.fc_li svg path {
-    fill: #fff;
-}
-
-.fc_li svg.lucide path {
-    fill: none;
-}
-
-.fc_li .separator {
-    height: 1px;
-    width: 100%;
-    background: linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%);
-    margin: 5px 0px;
-}
-
-.fc_title {
-    font-family: Beliau, sans-serif;
+.disclaimer-pill {
+    font-weight: 500;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    font-weight: 700 !important;
-}
-
-.fc_subtitle {
-    /* font-size: 10px; */
-    font-weight: 300;
     font-size: 13px;
-    font-family: Montserrat, sans-serif !important;
-}
-
-.footer_contact_ul .fc_li a.main {
-    text-decoration: underline !important;
-}
-
-.footer-new-desc {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    flex-direction: column;
-    background: #F5F5F5;
-    position: relative;
-    z-index: 3;
-}
-
-.footer-new-desc * {
-    text-align: center;
-    position: relative;
-    z-index: 3;
-    color: #000;
-}
-
-.footer-new-desc h3 {
-    font-size: 14px !important;
-    line-height: 20px;
-    margin-bottom: 1rem;
-}
-
-.footer-new-desc p {
-    font-size: 13px !important;
-    line-height: 15px;
-    margin-bottom: 10px;
-}
-
-.footer-new-desc {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.footer-new-desc-bg-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--theme-gradient-2);
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+    color: #1E150D;
+    flex-shrink: 0;
+    white-space: nowrap;
     z-index: 2;
 }
 
-.footer-new-desc-bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 1;
+.disclaimer-marquee {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
 }
 
-@media (max-width: 1200px) {
-    .footer-bottom-text-wrapper {
-        padding: 0px 0 20px;
-        align-items: start;
-    }
-
-    .footer-bottom-text-wrapper::after {
-        top: 0px;
-    }
-
-    .footer-bottom-text {
-        margin: 0px;
-        font-size: 12px;
-        display: inline;
-    }
-
-    .footer-bottom {
-        padding-bottom: 0;
-    }
-
-    .footer-bottom-text-wrapper {
-        padding: 10px 0;
-        row-gap: 5px;
-        align-items: center;
-    }
-
-    .footer-bottom-text-wrapper::after {
-        top: 0px;
-        display: block;
-    }
-
-    .footer-bottom-text {
-        margin: 0px;
-        font-size: 12px;
-        display: inline;
-        text-align: center;
-    }
-
-    .footer-bottom:after {
-        background-size: cover;
-    }
-
-    .footer-bottom img {
-        margin-bottom: 10px;
-        height: 100px;
-        width: 100px;
-    }
-
-    .footer-bottom {
-        padding-bottom: 5px !important;
-        padding-top: 40px !important;
-    }
-
-    .footer-bottom {
-        padding-top: 40px !important;
-    }
-
+.disclaimer-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+    animation: disclaimerMarquee 26s linear infinite;
 }
 
+.disclaimer-marquee:hover .disclaimer-track {
+    animation-play-state: paused;
+}
+
+.disclaimer-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.disclaimer-msg {
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.disclaimer-sep {
+    margin: 0 24px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+}
+
+@keyframes disclaimerMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 2. Middle Purple MahaRERA Band */
+.footer-rera-band {
+    background-color: #2D0544;
+    background-image: url('/images/footer/footer-bg-new.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    position: relative;
+}
+
+.rera-brand-tag {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.rera-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.rera-desc {
+    font-family: Montserrat, sans-serif;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 0;
+    max-width: 650px;
+}
+
+.rera-link {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.rera-link:hover {
+    color: #e5ac74 !important;
+}
+
+/* QR Code Container */
+.rera-qr-box {
+    display: flex;
+    align-items: center;
+}
+
+.rera-qr-img-wrapper {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rera-qr-img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    display: block;
+}
+
+.rera-qr-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qr-scan-badge {
+    font-family: Montserrat, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.qr-proj-name {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.qr-maharera-label {
+    font-family: Montserrat, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: #ffffff;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.qr-reg-num {
+    font-family: Montserrat, sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* 3. Bottom White Contact & Links Section */
+.footer-contact-section {
+    background-color: #fffcf7;
+    /* background-color: var(--bg-primary); */
+    color: var(--text-dark);
+    font-family: Montserrat, sans-serif;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-col-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+}
+
+.title-accent-line {
+    width: 34px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 4px;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-family: Montserrat, sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    text-transform: uppercase;
+}
+
+.contact-val,
+.contact-val a {
+    font-family: Montserrat, sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--text-dark) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.contact-val a:hover,
+.contact-val:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Social Media Circular Buttons */
+.connect-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.social-pills-row {
+    display: flex;
+    align-items: center;
+}
+
+.social-pill-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    background-color: transparent;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.social-pill-link:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(191, 130, 80, 0.3);
+}
+
+.social-pill-link svg {
+    display: block;
+    color: inherit;
+}
+
+/* Bottom Divider & Legal */
+.footer-bottom-divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.8;
+}
+
+.copyright-line {
+    font-family: Montserrat, sans-serif;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.footer-legal-links {
+    font-family: Montserrat, sans-serif;
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.legal-link {
+    color: var(--text-muted) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.legal-sep {
+    color: var(--border-color);
+}
+
+/* Responsive Rules */
 @media (max-width: 992px) {
-    .footer-bottom hr {
-        margin-bottom: 0px;
+    .disclaimer-strip-inner {
+        gap: 16px;
+        font-size: 12px;
     }
 
-    .qr-wrapper .col-md-3:last-child {
-        margin-bottom: 0 !important;
+    .rera-heading {
+        font-size: 22px;
     }
 
-    .footer_contact_ul {
-        margin-top: 10px;
-        padding-bottom: 20px !important;
-    }
-}
-
-@media (max-width: 552px) {
-    .footer_contact_ul {
-        flex-direction: column;
+    .connect-wrapper {
         align-items: flex-start;
-        justify-content: flex-start;
-        gap: 10px;
-        padding: 10px 0px;
     }
 
-    span.fc_title {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        padding-bottom: 60px !important;
-    }
-
-    .footer-bottom-text-wrapper {
-        padding: 10px 0;
-        flex-direction: column;
-        row-gap: 5px;
-        align-items: center;
-    }
-}
-
-@media(max-width:767px) {
-    .footer-bottom img {
+    .title-accent-line {
         margin-left: 0;
     }
 }
 
-.tata-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+@media (max-width: 576px) {
+    .disclaimer-strip-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
 
-.tata-wrapper img {
-    margin-left: 0;
-    width: auto;
+    .rera-qr-box {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .footer-col-title {
+        font-size: 16px;
+    }
 }

@@ -1,9 +1,20 @@
 .aboutSection {
   position: relative;
   /* height: 100vh; */
-  background: linear-gradient(104.85deg, rgba(255, 255, 255, 0.5) 0%, rgba(198, 193, 193, 0.5) 117.57%);
+  background-image: url('/images/about/about-bg.png');
+  background-color: #2A003D;
+  background-size: cover;
+  background-position: center right;
 }
 
+
+.aboutSection .sec_title {
+  color: var(--text-light)
+}
+
+.aboutSection .sub_title {
+  color: var(--primary-color);
+}
 
 .aboutSection .ov-list-container {
   max-width: 53vw;
@@ -18,7 +29,7 @@
 
 
 .about-vtp-wrapper {
-  background-image: url('/images/aboutVTp/about-bg.png');
+  background-image: url('/images/about/about-bg.png');
   background-color: #fff;
   background-size: cover;
   background-position: top;
@@ -104,6 +115,42 @@
 .about-vtp-wrapper.section-space {
   padding-top: 50px;
   padding-bottom: 55px;
+}
+
+.snap-container {
+  padding: 15px 0;
+  color: var(--text-light);
+  list-style: none;
+}
+
+.snap-item {
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 4px 15.1px 0px #0000001A;
+  background: #FFFFFF1A;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.snap-title {
+  position: relative;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.snap-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
 }
 
 @media (min-width: 1750px) {}

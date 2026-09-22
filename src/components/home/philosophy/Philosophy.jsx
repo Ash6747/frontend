@@ -60,34 +60,34 @@ const BrandPhilosophy = ({ data }) => {
   return (
     <section className="brand-philosophy-wrapper section-space side-space">
 
-        {/* Title */}
-        <div className="text-center p-0 philosophy-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <h2 className="sec_title">
-            <span className="sub_title-overview sub_title">
-              Designed with purpose
-            </span>
-            <br />
-            VTP brand philosophy
-            <br />
-          </h2>
-        </div>
+      {/* Title */}
+      <div className="text-center p-0 philosophy-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h2 className="sec_title">
+          <span className="sub_title">
+            Designed with purpose
+          </span>
+          <br />
+          VTP brand philosophy
+          <br />
+        </h2>
+      </div>
 
-        {/* Cards */}
-        <div className="row justify-content-center mt-5 g-md-4 g-xl-5">
-          {brandData.map((item, index) => (
-            <PhilosophyCard
-              key={index}
-              item={item}
-              delay={100 + index * 150}
-              image={philosophyData[index]?.image}
-              animation={philosophyData[index]?.animation}
-              alt={philosophyData[index]?.alt}
-              icon={philosophyData[index]?.icon}
-            />
-          ))}
-        </div>
+      {/* Cards */}
+      <div className="row justify-content-center mt-5 g-md-4 g-xl-5">
+        {brandData.map((item, index) => (
+          <PhilosophyCard
+            key={index}
+            item={item}
+            delay={100 + index * 150}
+            image={philosophyData[index]?.image}
+            animation={philosophyData[index]?.animation}
+            alt={philosophyData[index]?.alt}
+            icon={philosophyData[index]?.icon}
+          />
+        ))}
+      </div>
 
-      </section>
+    </section>
   );
 };
 
